@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Reset Password</title>
+	<link rel="stylesheet" type="text/css" href="/css/signin.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-color: #a7f5f5;">
+<div class="form_bg">
+	<%- include('./partials/message.ejs')%>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-4 col-md-4  col-sm-offset-3 col-sm-6">
+				<form class="form_horizontal" action='/user/reset-password?token=${token}' method="POST">
+					<div ><img src="/images/logo.png" class="logo" alt="logo-img"></div>
+					<h3 class="title">Reset</h3>
+				
+					<div class="form-group">
+						<span class="input-icon"><i class="fa fa-lock"></i></span>
+						<input class="form-control" type="password" name="password" placeholder="password">
+					</div>
+					
+					<button class="btn signin"><i class="fa fa-sign-in" aria-hidden="true"></i>Reset</button>
+					<ul class="form-options">
+						<li class="new"><a href="/user/signin"> signin<i class="fa fa-arrow-right"></i></a></li>
+					</ul>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

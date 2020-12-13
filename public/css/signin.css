@@ -1,0 +1,110 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	margin: 0;
+	padding: 0;
+	
+	 background-image: url("/images/mak.jpg");
+	}
+.form_bg{
+	
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+
+.form_horizontal{
+          font-family: 'loto',sans-serif;
+          text-align: center;
+}
+.form_horizontal .logo{
+	height: 150px;
+	width: 150px; 
+	border-radius: 50%;
+	border: none;
+
+}
+.form_horizontal .title{
+	 color: black;
+	 font-size: 23px;
+	 font-weight: 700;
+	 letter-spacing: 1px;
+	 text-transform: uppercase;
+	 margin: 15px 0 15px 0;
+}
+.form_horizontal .form-group{
+               margin: 0 0 10px;
+               position: relative;
+                
+}
+.form_horizontal .input-icon{
+	position: absolute;
+	left:15px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 13px;
+	color: #777;
+}
+.form_horizontal .form-control{
+	color: #555;
+	background-color: #c9c3b3;
+	font-size: 13px;
+	letter-spacing: 1px;
+	height: 37px;
+	padding: 2px 15px 2px 35px;
+	border: none;
+	border-radius: 10px;
+} 
+.form_horizontal .form-control::placeholder{
+	color: rgba(0,0,0,0.7);
+	font-size: 14px;
+	text-transform: capitalize;
+}
+
+.form_horizontal .btn{
+	color: #c4c1bb;
+	background-color: black;
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	width: 100%;
+	padding: 10px 20px;
+	margin: 0 0 15px 0;
+	border: none;
+	border-radius: 20px;
+	text-transform: uppercase;
+}
+.form_horizontal .btn:hover{
+	background-color: black;
+	color:#c0bbac;
+
+}
+.form_horizontal .form-options{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	height: 150px;
+}
+
+.form-options li a{
+	color: #c5bfb0;
+	letter-spacing:0.5px;
+	margin: 0 0 10px;
+	display: block;
+    
+}
+.form_horizontal .form-options li a i{
+	font-size: 12px;
+	
+}
+li.new {
+    margin-top: 50px;
+}
+.btn .fa-sign-in:before{
+	margin-left: -50px;
+	color:#d6d6d69c;
+	font-size: 20px;
+}

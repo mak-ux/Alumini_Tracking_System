@@ -1,0 +1,140 @@
+/*=========================
+	FONT COLOR
+=========================*/
+ul.menu li a i,
+.main-title > a,
+ul.menu-left > li a, 
+ul.menu-right > li a,
+.group-meta > h5 a:hover,
+.blog-meta > h5 a:hover,
+.blog-meta > span a,
+.close-btn,
+.user-options > a,
+.side-slide > ul li a:hover i,
+.side-slide > ul li a:hover,
+.more-options > ul li:hover,
+.comments-area > ul > li > a,
+.stat-tools > a.active,
+.logo-place > a,
+.user-name > h5,
+.follow-meta > a,
+.post-by > h5 > a,
+.news-meta .prv:hover,
+.news-meta .next:hover,
+.event-timing > h5,
+.group-detail > li > a,
+.event-item > a,
+.nearby-user .main-btn,
+.search-result > span,
+.commenter > a,
+.history-meta > h5 a:hover,
+.chat-desc > li > span,
+.price,
+.popular-box > a:hover,
+a.main-btn2,
+.main-btn2,
+.additional-info > ul li i,
+.attach-options > a i,
+.attach-options > a:hover,
+.user-short-mesg > p i,
+.search-area > form button:hover,
+.party-meta > h5 a:hover,
+.total-area > ul > li.order-total > i,
+.total-area > ul > li.order-total,
+.coupon-code > button,
+.reactions > li i,
+.error-page > span i,
+.movie-info > span,
+.about-movie > ul li span,
+.tags > a:hover,
+.group-meta > span i,
+.summary > a,
+.checkout-cart > em,
+.edit-img .fileContainer,
+.theme-black .white-form > div.uzer-nam > span,
+.tab-content > p a,
+.new-create .white-form label.fileContainer
+{
+	color: black;	
+}
+
+
+
+
+
+svg{
+stroke: #f3c33e;
+}
+path.icon{
+	fill: #f3c33e;
+}
+
+
+/*=========================
+	BACKGROUND COLOR
+=========================*/
+.menu-button,
+.profile-info,
+.follow-men > a,
+.post-form button,
+.attachments > ul li:hover,
+.share-options > ul > li a:hover,
+.share-options > ul > li a.active,
+.main-btn,
+.album > figure span,
+.main-title::before,
+.profile-pic > a,
+.event-timing .postdate,
+.event-meta > a,
+ul.tabs li.active a, ul.tabs li.active a:hover,
+input[type=checkbox]:checked + label:before,
+.search-area > form button,
+.form2 button,
+.paginations > a:hover,
+.paginations > a.active,
+.more-attachments.active,
+.chat-head,
+.owl-dot.active::before,
+.movie-banner .html5lightbox,
+a.view-cart,
+.ui-datepicker-calendar tbody td a.ui-state-active,
+a.create-event
+{
+	background: white;
+}
+
+.stroke-solid {
+	fill: black;
+}
+
+
+/*=========================
+	BORDER COLOR
+=========================*/
+.nearby-user .main-btn,
+.main-btn2,
+a.main-btn2,
+input[type=checkbox]:checked + label:before,
+.paginations > a,
+.search-area > form button:hover,
+.attachments > ul li.more-alt
+{
+	border-color: black;	
+}
+
+.abc{
+	border-left-color: black;
+}
+
+
+ul.tabs li.active a::before
+{
+	border-top-color: black;		
+}
+
+
+.login-area ul.tabs li.active a::before,
+.topbar
+{
+	border-bottom-color: black;
+}

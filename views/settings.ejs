@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 4U2NVY/html/4U2NVY-app/settings 4U2NVY/3.x [XR&CO'2014], Mon, 24 Aug 2020 07:40:30 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    
+	<title>4U2NVY</title>
+	<link rel="stylesheet" href="/css/main.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/color.css">
+</head>
+<body class="full-page" style="background-color:yellow;">
+<div class="row no-gutters vh-100 loader-screen">
+    <div class="col align-self-center text-white text-center">
+        <img src="/images/logo.png" alt="logo">
+        <h1>4U2NVY</h1>
+        <div class="laoderhorizontal">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+<div class="app-layout">
+	
+	<header class="topbar">
+		<div class="back-btn ico-hover" title="Back"><i class="lni lni-angle-double-left"></i></div>
+		<div class="top-search ico-hover" title="Search"><i class="lni lni-search-alt"></i></div>
+		<div class="logo-place"><a href="#" title=""><img src="/images/logo-white.png" alt=""></a></div>
+		<div class="ac-settings ico-hover" title="Settings"><i class="lni lni-radio-button"></i></div>
+		<div class="new-post" title="Create New Post"><i><img src="/images/svg/create-new.png" alt=""></i></div>
+	</header>
+
+	<div class="bottom-header">
+		<ul class="menu-left">
+			<li><a class="ico-hover" href="/user/newsfeed" title=""><i class="lni lni-home"></i></a></li>
+			<li><a class="ico-hover" href="/user/notifications" title=""><i class="lni lni-alarm"></i></a><span>3</span></li>
+		</ul>
+		<div id="nav-icon2" class="menu-button">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<ul class="menu-right">
+			<li><a class="ico-hover" href="/user/messages" title=""><i class="lni lni-comments"></i></a></li>
+			<li class=""><a class="ico-hover" href="/user/timeline" title=""><i class="lni lni-user"></i></a></li>
+		</ul>
+	</div>
+
+	<nav>
+	  <ul class="menu">
+		  <li data-text="Home"><a href="/user/newsfeed" title=""><i><img src="/images/svg/home.png" alt=""></i><span>Home</span></a></li>
+		  <li data-text="Home"><a href="/user/about" title=""><i><img src="/images/svg/user.png" alt=""></i><span>My Profile</span></a></li>
+		  <li data-text="Home"><a href="/user/photos" title=""><i><img src="/images/svg/photos.png" alt=""></i><span>Photos</span></a></li>
+		  <li data-text="Home"><a href="/user/videos" title=""><i><img src="/images/svg/video.png" alt=""></i><span>Videos</span></a></li>
+		  <li data-text="Home"><a href="/groups" title=""><i><img src="/images/svg/groups.png" alt=""></i><span>Groups</span></a></li>
+		  <li data-text="Home"><a href="/user/favpages" title=""><i><img src="/images/svg/pages.png" alt=""></i><span>Pages</span></a></li>
+		  <li data-text="Home"><a href="/user/notifications" title=""><i><img src="/images/svg/about.png" alt=""></i><span>Notifications</span></a></li>
+		  <li data-text="Home"><a href="/user/messages" title=""><i><img src="/images/svg/inbox.png" alt=""></i><span>Messages</span></a></li>
+		  <li data-text="Home"><a href="/user/followers" title=""><i><img src="/images/svg/users.png" alt=""></i><span>Followers</span></a></li>
+		  <li data-text="Home"><a href="/blogs" title=""><i><img src="/images/svg/news.png" alt=""></i><span>Blog Posts</span></a></li>
+		  <li data-text="Home"><a href="/market-place" title=""><i><img src="/images/svg/market.png" alt=""></i><span>Market Place</span></a></li>
+		  <li data-text="Home"><a href="/movies" title=""><i><img src="/images/svg/film.png" alt=""></i><span>Movies</span></a></li>
+		  <li data-text="Home"><a href="/events" title=""><i><img src="/images/svg/event.png" alt=""></i><span>Events</span></a></li>
+		  <li data-text="Home"><a href="/user/nearby" title=""><i><img src="/images/svg/nearby.png" alt=""></i><span>Nearby</span></a></li>
+		  <li data-text="Home"><a href="/user/settings" title=""><i><img src="/images/svg/setting.png" alt=""></i><span>Settings</span></a></li>
+	  </ul>
+	</nav><!-- compact nav menu -->
+
+	<section>
+		<div class="gap">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="setting-page">
+							<h5 class="main-title">Account Settings</h5>
+							<div class="tabBox">
+                            <ul class="tabs">
+                                <li><a href="#tab1">General</a></li>
+                                <li><a href="#tab2">Profile</a></li>
+                                <li><a href="#tab3">Privacy</a></li>
+								<li><a href="#tab4">Notifications</a></li>
+                            </ul>
+                            <div class="tabContainer">
+                                <div id="tab1" class="tabContent">
+									<div class="set-title">
+										<h5>General Setting</h5>
+										<span>Set your login preference, help us personalize your experience and make big account change here.</span>
+									</div>
+									<div class="onoff-options">
+										<form method="post">
+											<div class="setting-row">
+												<span>Sub users</span>
+												<p>Enable this if you want people to follow you</p>
+												<div class="chek-btun">
+													<input type="checkbox" hidden="hidden" id="btn1">
+													<label class="switch" for="btn1"></label>
+												</div>
+											</div>
+											<div class="setting-row">
+												<span>Enable follow me</span>
+												<p>Enable this if you want people to follow you</p>
+												<div class="chek-btun">
+													<input type="checkbox" hidden="hidden" id="btn2">
+													<label class="switch" for="btn2"></label>
+												</div>
+											</div>
+											<div class="setting-row">
+												<span>Send me notifications</span>
+												<p>Send me notification emails my friends like, share or message me</p>
+												<div class="chek-btun">
+													<input type="checkbox" hidden="hidden" id="btn3">
+													<label class="switch" for="btn3"></label>
+												</div>
+											</div>
+											<div class="setting-row">
+												<span>Text messages</span>
+												<p>Send me messages to my cell phone</p>
+												<div class="chek-btun">
+													<input type="checkbox" hidden="hidden" id="btn4">
+													<label class="switch" for="btn4"></label>
+												</div>
+											</div>
+											<div class="setting-row">
+												<span>Enable tagging</span>
+												<p>Enable my friends to tag me on their posts</p>
+												<div class="chek-btun">
+													<input type="checkbox" hidden="hidden" id="btn5">
+													<label class="switch" for="btn5"></label>
+												</div>
+											</div>
+											<div class="setting-row">
+												<span>Enable sound Notification</span>
+												<p>You'll hear notification sound when someone sends you a private message</p>
+												<div class="chek-btun">
+													<input type="checkbox" hidden="hidden" id="btn6">
+													<label class="switch" for="btn6"></label>
+												</div>
+											</div>
+
+											<div class="submit-btns">
+												<button type="button" class="main-btn" data-ripple=""><span>Save</span></button>
+												<button type="button" class="main-btn2" data-ripple=""><span>Cancel</span></button>
+											</div>
+										</form>
+									</div>
+									<div class="account-delete">
+										<h5>Account Changes</h5>
+										<div>
+											<span>Hide Your Posts and profile </span>
+											<button type="submit" class="main-btn2"><span>Deactivate</span></button>
+										</div>	
+										<div>
+											<span>Delete your account and data </span>
+											<button type="submit" class="main-btn"><span>close account</span></button>
+										</div>
+									</div>
+								</div>
+                                <div id="tab2" class="tabContent">
+									<div class="set-title">
+										<h5>Edit Profile</h5>
+										<span>People on 4U2NVY will get to know you with the info below</span>
+									</div>
+									<div class="setting-meta">
+										<div class="change-photo">
+											<figure><img src="/images/resources/user1.jpg" alt=""></figure>
+											<div class="edit-img">
+												<form class="edit-phto">
+
+													<label class="fileContainer">
+														<i class="fa fa-camera-retro"></i>
+														Chage DP
+													<input type="file">
+													</label>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="stg-form-area">
+										<form method="post" class="white-form">
+											<div>
+												<label>Display Name</label>
+												<input type="text" placeholder="Jack Carter">
+											</div>
+
+											<div class="uzer-nam">
+												<label>User Name</label>
+												<span>www.4U2NVY.com/</span><input type="text" placeholder="jackcarter4023">
+											</div>
+											<div>
+												<label>Email Address</label>
+												<input type="text" placeholder="abc@4U2NVYmail.com">
+											</div>
+											<div>
+												<label>Gender</label>
+												<div class="form-radio">
+												  <div class="radio">
+													<label>
+													  <input type="radio" checked="checked" name="radio"><i class="check-box"></i>Male
+													</label>
+												  </div>
+												  <div class="radio">
+													<label>
+													  <input type="radio" name="radio"><i class="check-box"></i>Female
+													</label>
+												  </div>
+													<div class="radio">
+													<label>
+													  <input type="radio" name="radio"><i class="check-box"></i>Custom
+													</label>
+												  </div>
+												</div>
+											</div>
+											<div>
+												<label>about your profile</label>
+												<textarea rows="3" placeholder="write someting about yourself"></textarea>
+											</div>	
+
+											<div>
+												<label>Location</label>
+												<input type="text" placeholder="Ex.San Francisco, CA">
+											</div>
+											<div>
+												<label>Country</label>
+												<select>
+												  <option value="country">Country</option>
+												  <option value="AFG">Afghanistan</option>
+												  <option value="ALA">Ƭand Islands</option>
+												  <option value="ALB">Albania</option>
+												  <option value="DZA">Algeria</option>
+												  <option value="ASM">American Samoa</option>
+												  <option value="AND">Andorra</option>
+												  <option value="AGO">Angola</option>
+												  <option value="AIA">Anguilla</option>
+												  <option value="ATA">Antarctica</option>
+												  <option value="ATG">Antigua and Barbuda</option>
+												  <option value="ARG">Argentina</option>
+												  <option value="ARM">Armenia</option>
+												  <option value="ABW">Aruba</option>
+												  <option value="AUS">Australia</option>
+												  <option value="AUT">Austria</option>
+												  <option value="AZE">Azerbaijan</option>
+												  <option value="BHS">Bahamas</option>
+												  <option value="BHR">Bahrain</option>
+												  <option value="BGD">Bangladesh</option>
+												  <option value="BRB">Barbados</option>
+												  <option value="BLR">Belarus</option>
+												  <option value="BEL">Belgium</option>
+												  <option value="BLZ">Belize</option>
+												  <option value="BEN">Benin</option>
+												  <option value="BMU">Bermuda</option>
+												  <option value="BTN">Bhutan</option>
+												  <option value="BOL">Bolivia, Plurinational State of</option>
+												  <option value="BES">Bonaire, Sint Eustatius and Saba</option>
+												  <option value="BIH">Bosnia and Herzegovina</option>
+												  <option value="BWA">Botswana</option>
+												  <option value="BVT">Bouvet Island</option>
+												  <option value="BRA">Brazil</option>
+												  <option value="IOT">British Indian Ocean Territory</option>
+												  <option value="BRN">Brunei Darussalam</option>
+												  <option value="BGR">Bulgaria</option>
+												  <option value="BFA">Burkina Faso</option>
+												  <option value="BDI">Burundi</option>
+												  <option value="KHM">Cambodia</option>
+												  <option value="CMR">Cameroon</option>
+												  <option value="CAN">Canada</option>
+												  <option value="CPV">Cape Verde</option>
+												  <option value="CYM">Cayman Islands</option>
+												  <option value="CAF">Central African Republic</option>
+												  <option value="TCD">Chad</option>
+												  <option value="CHL">Chile</option>
+												  <option value="CHN">China</option>
+												  <option value="CXR">Christmas Island</option>
+												  <option value="CCK">Cocos (Keeling) Islands</option>
+												  <option value="COL">Colombia</option>
+												  <option value="COM">Comoros</option>
+												  <option value="COG">Congo</option>
+												  <option value="COD">Congo, the Democratic Republic of the</option>
+												  <option value="COK">Cook Islands</option>
+												  <option value="CRI">Costa Rica</option>
+												  <option value="CIV">C𴥠d'Ivoire</option>
+												  <option value="HRV">Croatia</option>
+												  <option value="CUB">Cuba</option>
+												  <option value="CUW">Cura袯</option>
+												  <option value="CYP">Cyprus</option>
+												  <option value="CZE">Czech Republic</option>
+												  <option value="DNK">Denmark</option>
+												  <option value="DJI">Djibouti</option>
+												  <option value="DMA">Dominica</option>
+												  <option value="DOM">Dominican Republic</option>
+												  <option value="ECU">Ecuador</option>
+												  <option value="EGY">Egypt</option>
+												  <option value="SLV">El Salvador</option>
+												  <option value="GNQ">Equatorial Guinea</option>
+												  <option value="ERI">Eritrea</option>
+												  <option value="EST">Estonia</option>
+												  <option value="ETH">Ethiopia</option>
+												  <option value="FLK">Falkland Islands (Malvinas)</option>
+												  <option value="FRO">Faroe Islands</option>
+												  <option value="FJI">Fiji</option>
+												  <option value="FIN">Finland</option>
+												  <option value="FRA">France</option>
+												  <option value="GUF">French Guiana</option>
+												  <option value="PYF">French Polynesia</option>
+												  <option value="ATF">French Southern Territories</option>
+												  <option value="GAB">Gabon</option>
+												  <option value="GMB">Gambia</option>
+												  <option value="GEO">Georgia</option>
+												  <option value="DEU">Germany</option>
+												  <option value="GHA">Ghana</option>
+												  <option value="GIB">Gibraltar</option>
+												  <option value="GRC">Greece</option>
+												  <option value="GRL">Greenland</option>
+												  <option value="GRD">Grenada</option>
+												  <option value="GLP">Guadeloupe</option>
+												  <option value="GUM">Guam</option>
+												  <option value="GTM">Guatemala</option>
+												  <option value="GGY">Guernsey</option>
+												  <option value="GIN">Guinea</option>
+												  <option value="GNB">Guinea-Bissau</option>
+												  <option value="GUY">Guyana</option>
+												  <option value="HTI">Haiti</option>
+												  <option value="HMD">Heard Island and McDonald Islands</option>
+												  <option value="VAT">Holy See (Vatican City State)</option>
+												  <option value="HND">Honduras</option>
+												  <option value="HKG">Hong Kong</option>
+												  <option value="HUN">Hungary</option>
+												  <option value="ISL">Iceland</option>
+												  <option value="IND">India</option>
+												  <option value="IDN">Indonesia</option>
+												  <option value="IRN">Iran, Islamic Republic of</option>
+												  <option value="IRQ">Iraq</option>
+												  <option value="IRL">Ireland</option>
+												  <option value="IMN">Isle of Man</option>
+												  <option value="ISR">Israel</option>
+												  <option value="ITA">Italy</option>
+												  <option value="JAM">Jamaica</option>
+												  <option value="JPN">Japan</option>
+												  <option value="JEY">Jersey</option>
+												  <option value="JOR">Jordan</option>
+												  <option value="KAZ">Kazakhstan</option>
+												  <option value="KEN">Kenya</option>
+												  <option value="KIR">Kiribati</option>
+												  <option value="PRK">Korea, Democratic People's Republic of</option>
+												  <option value="KOR">Korea, Republic of</option>
+												  <option value="KWT">Kuwait</option>
+												  <option value="KGZ">Kyrgyzstan</option>
+												  <option value="LAO">Lao People's Democratic Republic</option>
+												  <option value="LVA">Latvia</option>
+												  <option value="LBN">Lebanon</option>
+												  <option value="LSO">Lesotho</option>
+												  <option value="LBR">Liberia</option>
+												  <option value="LBY">Libya</option>
+												  <option value="LIE">Liechtenstein</option>
+												  <option value="LTU">Lithuania</option>
+												  <option value="LUX">Luxembourg</option>
+												  <option value="MAC">Macao</option>
+												  <option value="MKD">Macedonia, the former Yugoslav Republic of</option>
+												  <option value="MDG">Madagascar</option>
+												  <option value="MWI">Malawi</option>
+												  <option value="MYS">Malaysia</option>
+												  <option value="MDV">Maldives</option>
+												  <option value="MLI">Mali</option>
+												  <option value="MLT">Malta</option>
+												  <option value="MHL">Marshall Islands</option>
+												  <option value="MTQ">Martinique</option>
+												  <option value="MRT">Mauritania</option>
+												  <option value="MUS">Mauritius</option>
+												  <option value="MYT">Mayotte</option>
+												  <option value="MEX">Mexico</option>
+												  <option value="FSM">Micronesia, Federated States of</option>
+												  <option value="MDA">Moldova, Republic of</option>
+												  <option value="MCO">Monaco</option>
+												  <option value="MNG">Mongolia</option>
+												  <option value="MNE">Montenegro</option>
+												  <option value="MSR">Montserrat</option>
+												  <option value="MAR">Morocco</option>
+												  <option value="MOZ">Mozambique</option>
+												  <option value="MMR">Myanmar</option>
+												  <option value="NAM">Namibia</option>
+												  <option value="NRU">Nauru</option>
+												  <option value="NPL">Nepal</option>
+												  <option value="NLD">Netherlands</option>
+												  <option value="NCL">New Caledonia</option>
+												  <option value="NZL">New Zealand</option>
+												  <option value="NIC">Nicaragua</option>
+												  <option value="NER">Niger</option>
+												  <option value="NGA">Nigeria</option>
+												  <option value="NIU">Niue</option>
+												  <option value="NFK">Norfolk Island</option>
+												  <option value="MNP">Northern Mariana Islands</option>
+												  <option value="NOR">Norway</option>
+												  <option value="OMN">Oman</option>
+												  <option value="PAK">Pakistan</option>
+												  <option value="PLW">Palau</option>
+												  <option value="PSE">Palestinian Territory, Occupied</option>
+												  <option value="PAN">Panama</option>
+												  <option value="PNG">Papua New Guinea</option>
+												  <option value="PRY">Paraguay</option>
+												  <option value="PER">Peru</option>
+												  <option value="PHL">Philippines</option>
+												  <option value="PCN">Pitcairn</option>
+												  <option value="POL">Poland</option>
+												  <option value="PRT">Portugal</option>
+												  <option value="PRI">Puerto Rico</option>
+												  <option value="QAT">Qatar</option>
+												  <option value="REU">R궮ion</option>
+												  <option value="ROU">Romania</option>
+												  <option value="RUS">Russian Federation</option>
+												  <option value="RWA">Rwanda</option>
+												  <option value="BLM">Saint Barthꭥmy</option>
+												  <option value="SHN">Saint Helena, Ascension and Tristan da Cunha</option>
+												  <option value="KNA">Saint Kitts and Nevis</option>
+												  <option value="LCA">Saint Lucia</option>
+												  <option value="MAF">Saint Martin (French part)</option>
+												  <option value="SPM">Saint Pierre and Miquelon</option>
+												  <option value="VCT">Saint Vincent and the Grenadines</option>
+												  <option value="WSM">Samoa</option>
+												  <option value="SMR">San Marino</option>
+												  <option value="STP">Sao Tome and Principe</option>
+												  <option value="SAU">Saudi Arabia</option>
+												  <option value="SEN">Senegal</option>
+												  <option value="SRB">Serbia</option>
+												  <option value="SYC">Seychelles</option>
+												  <option value="SLE">Sierra Leone</option>
+												  <option value="SGP">Singapore</option>
+												  <option value="SXM">Sint Maarten (Dutch part)</option>
+												  <option value="SVK">Slovakia</option>
+												  <option value="SVN">Slovenia</option>
+												  <option value="SLB">Solomon Islands</option>
+												  <option value="SOM">Somalia</option>
+												  <option value="ZAF">South Africa</option>
+												  <option value="SGS">South Georgia and the South Sandwich Islands</option>
+												  <option value="SSD">South Sudan</option>
+												  <option value="ESP">Spain</option>
+												  <option value="LKA">Sri Lanka</option>
+												  <option value="SDN">Sudan</option>
+												  <option value="SUR">Suriname</option>
+												  <option value="SJM">Svalbard and Jan Mayen</option>
+												  <option value="SWZ">Swaziland</option>
+												  <option value="SWE">Sweden</option>
+												  <option value="CHE">Switzerland</option>
+												  <option value="SYR">Syrian Arab Republic</option>
+												  <option value="TWN">Taiwan, Province of China</option>
+												  <option value="TJK">Tajikistan</option>
+												  <option value="TZA">Tanzania, United Republic of</option>
+												  <option value="THA">Thailand</option>
+												  <option value="TLS">Timor-Leste</option>
+												  <option value="TGO">Togo</option>
+												  <option value="TKL">Tokelau</option>
+												  <option value="TON">Tonga</option>
+												  <option value="TTO">Trinidad and Tobago</option>
+												  <option value="TUN">Tunisia</option>
+												  <option value="TUR">Turkey</option>
+												  <option value="TKM">Turkmenistan</option>
+												  <option value="TCA">Turks and Caicos Islands</option>
+												  <option value="TUV">Tuvalu</option>
+												  <option value="UGA">Uganda</option>
+												  <option value="UKR">Ukraine</option>
+												  <option value="ARE">United Arab Emirates</option>
+												  <option value="GBR">United Kingdom</option>
+												  <option value="USA" selected>United States</option>
+												  <option value="UMI">United States Minor Outlying Islands</option>
+												  <option value="URY">Uruguay</option>
+												  <option value="UZB">Uzbekistan</option>
+												  <option value="VUT">Vanuatu</option>
+												  <option value="VEN">Venezuela, Bolivarian Republic of</option>
+												  <option value="VNM">Viet Nam</option>
+												  <option value="VGB">Virgin Islands, British</option>
+												  <option value="VIR">Virgin Islands, U.S.</option>
+												  <option value="WLF">Wallis and Futuna</option>
+												  <option value="ESH">Western Sahara</option>
+												  <option value="YEM">Yemen</option>
+												  <option value="ZMB">Zambia</option>
+												  <option value="ZWE">Zimbabwe</option>
+											  </select>
+											</div>
+											<div class="buttonz">
+												<button class="main-btn" type="submit" data-ripple="">Cancel</button>
+												<button class="main-btn2" type="submit" data-ripple="">Save</button>
+											</div>
+										</form>
+									</div>
+								</div>
+                                <div id="tab3" class="tabContent">
+									<div class="set-title">
+										<h5>Privacy & data</h5>
+										<span>Deceide whether your profile will be hidden from search engine and what kind of data you want to use to imporve the recommendation and ads you see <a href="#" title="">Learn more</a></span>
+									</div>
+									<div class="onoff-options ">
+										<form method="post">
+											<div class="setting-row">
+												<span>Search Privacy</span>
+												<p>Hide your profile from search engine (Ex.google) <a href="#" title="">Learn more</a>
+												</p>
+												<input type="checkbox" id="switch0001" /> 
+												<label for="switch0001" data-on-label="ON" data-off-label="OFF"></label>
+											</div>
+											<div class="set-title">
+												<h5>Personalization</h5>
+											</div>	
+											<div class="setting-row">
+												<span>Search Privacy</span>
+												<p>use sites you visit to improve which recommendation and ads you see. <a href="#" title="">Learn more</a>
+												</p>
+												<input type="checkbox" id="switch0002" /> 
+												<label for="switch0002" data-on-label="ON" data-off-label="OFF"></label>
+											</div>
+											<div class="setting-row">
+												<span>Search Privacy</span>
+												<p>use information from our partners to improve which ads you see<a href="#" title="">Learn more</a>
+												</p>
+												<input type="checkbox" id="switch0003" /> 
+												<label for="switch0003" data-on-label="ON" data-off-label="OFF"></label>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div id="tab4" class="tabContent">
+									<div class="set-title">
+										<h5>Notification Setting</h5>
+										<span>Select push and email notifications you'd like to receive.</span>
+									</div>
+									<div class="notifi-seting">
+										<div class="form-radio">
+										  <div class="radio">
+											<label>
+											  <input type="radio" checked="checked" name="radio"><i class="check-box"></i>
+												Send Me emails about my activity except emails i have unsubscribe from
+											</label>
+										  </div>
+										  <div class="radio">
+											<label>
+											  <input type="radio" name="radio"><i class="check-box"></i>
+												Only send me required services announcements.
+											</label>
+										  </div>
+										</div>
+										<div class="set-title">
+											<h6>i'd like to receive emails and updates from 4U2NVY about</h6>
+										</div>	
+										<div class="checkbox">
+										  <label>
+											<input type="checkbox" checked="checked"><i class="check-box"></i>
+											  Always General announcement, updates, posts, and videos. 
+										  </label>
+										  <label>
+											<input type="checkbox" checked="checked"><i class="check-box"></i>
+											  Personalise tips for my page. 
+										  </label>
+										  <label>
+											<input type="checkbox" checked="checked"><i class="check-box"></i>
+											  Announcements and recommendations. 
+										  </label>
+											<p><a href="#" title="">learn more</a> about emails from 4U2NVY</p>
+										</div>
+										<div class="set-title">
+											<h6>Other Notifications</h6>
+										</div>	
+										<div class="checkbox">
+										  <label>
+											<input type="checkbox" checked="checked"><i class="check-box"></i>
+											  Recommended videos. 
+										  </label>
+										  <label>
+											<input type="checkbox" checked="checked"><i class="check-box"></i>
+											  activity on my page or channel. 
+										  </label>
+										  <label>
+											<input type="checkbox" checked="checked"><i class="check-box"></i>
+											  Activity on my comments. 
+										  </label>
+											<label>
+											<input type="checkbox" checked="checked"><i class="check-box"></i>
+											  Reply to comments. 
+										  </label>
+											<label>
+											<input type="checkbox" checked="checked"><i class="check-box"></i>
+											  Mentions. 
+										  </label>
+
+										</div>
+										<div class="set-title">
+											<h6>Language Preference</h6>
+											<span>Select your email language</span>
+										</div>
+										<select class="select">
+											<option value="">Eglish US</option>
+											<option value="">Eglish UK</option>
+											<option value="">Russia</option>
+										</select>
+										<p>
+											you will always get notifications you have turned on for individual <a href="#" title="">Manage All Subscriptions</a>
+										</p>
+									</div>
+								</div>	
+                            </div>
+                        </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	<div class="bottombar">
+		<span>&copy; Copyright All rights Reserved 2020</span>
+	</div>
+
+	<div class="side-slide">
+		<span class="close-btn"><i class="lni lni-cross-circle"></i></span>
+		<div class="user-avatar">
+			<figure><img src="/images/resources/user3.jpg" alt=""><span class="status status greenbg"></span></figure>
+			<div class="user-options">
+				<h5>Welson 4U2NVY</h5>
+				<a href="/user/about" title="">view profile</a>
+			</div>
+		</div>
+		<ul>
+			<li><a href="/user/messages" title=""><i class="lni lni-inbox"></i>inbox</a></li>
+			<li><a href="/user/notifications" title=""><i class="lni lni-alarm"></i>Notifications</a></li>
+			<li><a href="/user/settings" title=""><i class="lni lni-pencil-alt"></i>Edit Profile</a></li>
+			<li><a href="/user/lock-screen" title=""><i class="lni lni-key"></i>Lock screen</a></li>
+			<li><a href="/user/settings" title=""><i class="lni lni-control-panel"></i>setting</a></li>
+			<li><a href="/privacy" title=""><i class="lni lni-sort-amount-asc"></i>Privacy & Help</a></li>
+			<li><a href="/user/create-page" title=""><i class="lni lni-pencil"></i>Create Page</a></li>
+			<li><a href="/user/create-page" title=""><i class="lni lni-cloud-network"></i>Create Group</a></li>
+			<li><a href="#" title=""><i class="lni lni-power-switch"></i>Logout</a></li>
+		</ul>
+		<div class="night-mode">
+			<i class="lni lni-night"></i>Night Mode 
+			<input type="checkbox" hidden="hidden" id="night-mode">
+			<label class="switch" for="night-mode"></label>
+		</div>
+	</div><!-- side panel -->
+
+	<div class="search-post">
+		<span class="close-btn"><i class="lni lni-cross-circle"></i></span>
+		<div class="search-area">
+			<h5 class="main-title">Search By</h5>
+			<form method="post">
+				<input type="text" placeholder="Search #tag, People, Groups, etc..">
+				<div class="filter-search">
+					<div>
+						<i class="lni lni-users"></i>
+						<input type="checkbox" id="find-friend">
+  						<label for="find-friend">Find Friends</label>
+					</div>
+					<div>
+						<i class="lni lni-signal"></i>
+						<input type="checkbox" id="nearby">
+  						<label for="nearby">Nearby</label>
+					</div>
+					<div>
+						<i class="lni lni-calendar"></i>
+						<input type="checkbox" id="event">
+  						<label for="event">Events</label>
+					</div>
+					<div>
+						<i class="lni lni-save"></i>
+						<input type="checkbox" id="saved">
+  						<label for="saved">Saved Posts</label>
+					</div>
+					<div>
+						<i class="lni lni-network"></i>
+						<input type="checkbox" id="group">
+  						<label for="group">Groups</label>
+					</div>
+					<div>
+						<i class="lni lni-add-files"></i>
+						<input type="checkbox" id="pages">
+  						<label for="pages">Pages</label>
+					</div>
+					<div>
+						<i class="lni lni-map-marker"></i>
+						<input type="checkbox" id="loc">
+  						<label for="loc">Select Location</label>
+					</div>
+				</div>
+				<button type="submit">Find</button>
+			</form>
+		</div>
+	</div><!-- search -->
+
+	<div class="create-new">
+		<div class="post-form">
+			<h5>Create New Post</h5>
+			<span class="close-btn"><i class="lni lni-cross-circle"></i></span>
+			<form>
+			<textarea placeholder="write something"></textarea>
+				<div class="attachments">
+					<ul>
+						<li>
+							<i class="lni lni-music"></i>
+							<label class="fileContainer">
+								<input type="file">
+							</label>
+						</li>
+						<li>
+							<i class="lni lni-image"></i>
+							<label class="fileContainer">
+								<input type="file">
+							</label>
+						</li>
+						<li>
+							<i class="lni lni-video"></i>
+							<label class="fileContainer">
+								<input type="file">
+							</label>
+						</li>
+						<li>
+							<i class="lni lni-emoji-smile"></i>
+							<label class="fileContainer">
+								<input type="file">
+							</label>
+						</li>
+						<li class="more-alt">
+							<i class="lni lni-more-alt"></i>
+						</li>
+					</ul>
+					<div class="more-alt-options">
+						<ul>
+							<li><a href="#" title=""><img src="/images/svg/recommend.png" alt="">Ask for Recommendation</a></li>
+							<li><a href="#" title=""><img src="/images/svg/live.png" alt="">Go Live</a></li>
+							<li><a href="#" title=""><img src="/images/svg/map-marker.png" alt="">Check in</a></li>
+							<li><a href="#" title=""><img src="/images/svg/gif.png" alt="">Gif</a></li>
+						</ul>
+						<ol class="post-to-also">
+							<li>
+								<input type="checkbox" id="switch0004" /> 
+								<label for="switch0004" data-on-label="ON" data-off-label="OFF"></label>
+								<i class="lni lni-circle-plus"></i>
+								NewsFeed
+							</li>
+							<li>
+								<input type="checkbox" id="switch0005" /> 
+								<label for="switch0005" data-on-label="ON" data-off-label="OFF"></label>
+								<figure><img src="/images/resources/user1.jpg" alt=""></figure>Your Story
+							</li>
+						</ol>
+					</div>
+				</div>
+				<button type="submit">Publish</button>
+			</form>
+		</div>
+	</div><!-- create new post -->
+
+	<div class="share-wraper">
+		<div class="share-options">
+			<span class="close-btn"><i class="lni lni-cross-circle"></i></span>
+			<h5>Share To!</h5>
+			<form method="post">
+				<textarea placeholder="Write Something"></textarea>
+			</form>
+			<ul>
+				<li><a href="#" title="">Your Timeline</a></li>
+				<li class="friends"><a href="#" title="">To Friends</a></li>
+				<li class="socialz"><a href="#" title="">Social Media</a></li>
+			</ul>
+			<div class="social-media" style="display: none;">
+				<ul>
+					<li><a class="facebook" href="#" title=""><i class="lni lni-facebook"></i></a></li>
+					<li><a class="twitter" href="#" title=""><i class="lni lni-twitter"></i></a></li>
+					<li><a class="instagram" href="#" title=""><i class="lni lni-instagram"></i></a></li>
+					<li><a class="pinterest" href="#" title=""><i class="lni lni-pinterest"></i></a></li>
+					<li><a class="youtube" href="#" title=""><i class="lni lni-youtube"></i></a></li>
+					<li><a class="dribble" href="#" title=""><i class="lni lni-dribbble"></i></a></li>
+					<li><a class="behance" href="#" title=""><i class="lni lni-behance-original"></i></a></li>
+				</ul>
+			</div>
+			<div class="friends-to" style="display: none;">
+				<div class="follow-men">
+					<figure><img alt="" src="/images/resources/user1.jpg" class="mCS_img_loaded"></figure>
+					<div class="follow-meta">
+						<h5><a title="" href="#">Jack Carter</a></h5>
+						<span>family member</span>
+					</div>
+					<a title="" href="#">Share</a>
+				</div>
+				<div class="follow-men">
+					<figure><img alt="" src="/images/resources/user2.jpg" class="mCS_img_loaded"></figure>
+					<div class="follow-meta">
+						<h5><a title="" href="#">Xang Ching</a></h5>
+						<span>Close Friend</span>
+					</div>
+					<a title="" href="#">Share</a>
+				</div>
+				<div class="follow-men">
+					<figure><img alt="" src="/images/resources/user3.jpg" class="mCS_img_loaded"></figure>
+					<div class="follow-meta">
+						<h5><a title="" href="#">Emma Watson</a></h5>
+						<span>Matul Friend</span>
+					</div>
+					<a title="" href="#">Share</a>
+				</div>
+			</div>
+			<button class="main-btn" type="submit">Publish</button>
+		</div>
+	</div><!-- share popup -->
+	
+</div>
+	
+
+	<script src="/js/main.min.js"></script>
+	<script src="/js/script.js"></script>
+	
+</body>
+
+<!-- 4U2NVY/html/4U2NVY-app/settings 4U2NVY/3.x [XR&CO'2014], Mon, 24 Aug 2020 07:40:30 GMT -->
+</html>

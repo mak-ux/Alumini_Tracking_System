@@ -1,0 +1,102 @@
+body{
+	margin: 0;
+	padding: 0;
+	 font-family: 'loto',sans-serif;
+	 text-align: center;
+	 background-image: url("/images/mak.jpg");
+	}
+video{
+	position: fixed;
+	z-index: -1;
+	right: 0;
+	bottom:0;
+	opacity: 0.5;
+}
+
+.form_bg{
+	
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+
+.form_horizontal{
+          font-family: 'loto',sans-serif;
+          text-align: center;
+}
+.form_horizontal .logo{
+	height: 150px;
+	width: 150px; 
+	border-radius: 50%;
+	border: none;
+	margin-top: -100px;
+
+}
+.form_horizontal .btn{
+	color: black;
+	background-color: #e9e5d9;
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	width: 100%;
+	padding: 10px 20px;
+	margin: 0 0 15px 0;
+	border: none;
+	border-radius: 20px;
+	text-transform: uppercase;
+}
+.form_horizontal .title{
+	 color: black;
+	 font-size: 23px;
+	 font-weight: 700;
+	 letter-spacing: 1px;
+	 text-transform: uppercase;
+	 margin: 15px 0 18px 0;
+	 text-align: center;
+}
+/*.lines{
+	width: 100px;
+	height: 45px;
+	position: relative;
+}*/
+.lines::after, .lines::before{
+	content: "";
+	position: absolute;
+	margin: auto;
+	height: 2px;
+	background: black;
+	width:40%;
+	top: 60%;
+}
+.lines::after{
+	left: 12px;
+}
+.lines::before{
+	right:15px;
+}
+.form_horizontal .create{
+	color: #f3c33e;
+	background-color: #eeddb59c;
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	width: 100%;
+	padding: 10px 20px;
+	margin: 0 0 15px 0;
+	border: none;
+	border-radius: 20px;
+	text-transform: uppercase;
+}
+button .fa-plus-circle::before{
+	margin-left: 2px;
+	font-size: 20px;
+}
+button .fa-sign-in:before{
+	margin-left: 2px;
+	color:#d3cec29c;
+	font-size: 20px;
+}
+
+
+	
