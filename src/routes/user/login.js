@@ -45,6 +45,7 @@ router.get("/forget",(req,res)=>{
 
 
 
+
 // //<-------------->for photo upload<---------------->
 
 
@@ -57,7 +58,7 @@ router.get("/forget",(req,res)=>{
 
   
   router.get("/search",auth, async(req,res)=>{
-	res.render("chorus search.ejs")
+	res.render("search.ejs")
 })
 
 // //<
@@ -289,6 +290,11 @@ router.post("/reset-password", async (req, res) => {
 	newUser = (await User.findById(req.user._id))
 	res.render('alumini.ejs',{user:newUser})
 })
+router.post('/search',async(req,res)=>{
+	res.redirect('/user/search')
+})
+
+//create search get and pot routes
 
 module.exports = router;
 
