@@ -4,8 +4,11 @@ const router = express.Router();
 const crypto=require('crypto');
 const path = require("path");
 
+
 const multer = require("multer");
 const User = require("../../models/user/user.js");
+const Notice = require("../../models/user/notice.js");
+const Event = require("../../models/user/event.js");
 
 const auth=require('../../authentication/user/auth')
 const {mailverification,resetpassword} = require("../../emails/mailverification");
@@ -57,9 +60,7 @@ router.get("/forget",(req,res)=>{
 	  
 
   
-  router.get("/search",auth, async(req,res)=>{
-	res.render("search.ejs")
-})
+  
 
 // //<
 // //<-------------->TO READ THE USER PROFILE<---------------->
@@ -131,8 +132,11 @@ router.get("/mailverification", async (req, res) => {
 	}
   });
   
+  router.get("/chat" ,(req,res) =>{
+	res.render('chat')
+  })
 
-
+  
 
 //======================================
 //
@@ -290,10 +294,57 @@ router.post("/reset-password", async (req, res) => {
 	newUser = (await User.findById(req.user._id))
 	res.render('alumini.ejs',{user:newUser})
 })
-router.post('/search',async(req,res)=>{
-	res.redirect('/user/search')
-})
 
+/*router.get('/search',auth,async(req,res)=>{
+    try{
+        const all_products_ids=await User.find({})
+        const product_ids=all_products_ids[0][req.query.tag]
+        if(product_ids !== 'undefined')
+        {
+            var all_products=[]
+            for(var i=0;i<product_ids.length;i++)
+            {
+                console.log(product_ids[i])
+                if(product_ids[i].user_id)
+                {
+                    const product=await User.findById({_id:product_ids[i].user_id})
+                    all_products=[...all_products,product]
+                }                
+            }
+            res.json({products:all_products})
+            //res.render('search.ejs',{data:all_products.reverse(),user:req.user})
+        }
+    }catch(e){
+        res.send(e)
+    }
+})
+router.post('/filters',async(req,res)=>{
+    try {
+        var ans=[];
+        const filter_tags=await User.find({});
+        const all_tags=filter_tags[0];
+        console.log(all_tags);
+        const filters=req.body.filters;//to be applied tags
+        console.log(filters);
+        const products_for_first_filter=all_tags[filters[0][0]];
+        products_for_first_filter.forEach(async (user_id)=>{
+            var prod=await User.findById({_id:user_id});
+            for(var i=0;i<filters.length;i++)                 // looping through tags (color,size)
+            {
+                for(var j=0;j<filters[i].length;j++)           // looping through tags value (blue,red,black)
+                {
+                    if(prod[filters[i]].equals(filters[i][j]))
+                    ans.push(prod);
+                }
+            }
+        })
+        console.log(ans);
+        res.send(ans);
+        
+    } catch (error) {
+        console.log(error);
+    }
+})*/
 //create search get and pot routes
 
 module.exports = router;

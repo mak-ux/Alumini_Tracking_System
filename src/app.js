@@ -54,6 +54,7 @@ app.get("/",(req,res)=>{
 
 
 app.use('/user',require('./routes/user/login'));
+app.use('/user',require('./routes/user/search'));
 
 
 const PORT = process.env.PORT || 3000;

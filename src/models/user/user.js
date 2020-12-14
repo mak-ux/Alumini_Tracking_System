@@ -66,7 +66,7 @@ const userSchema = new mongoose.Schema({
 	  
 	  userImage : {
 		type:String,
-		default:'def.jpg'
+		default:'logo.png'
 	},
 	
 	
@@ -77,9 +77,9 @@ const userSchema = new mongoose.Schema({
 	address: String,
     city: String,
     state: String,
-    phone: String,
 	country: String,
-    mobile: String,
+	mobile: String,
+	
 	  
 	 
 	 

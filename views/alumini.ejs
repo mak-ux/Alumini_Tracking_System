@@ -121,7 +121,7 @@
           <a class="nav-link" href="/user/event" style="color:black;">Events</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/user/notish" style="color:black;">Notish</a>
+          <a class="nav-link" href="/user/notish" style="color:black;">Notice</a>
         </li>
           <li class="nav-item">
           <a class="nav-link" href="http://www.gmail.com" style="color:black;">Webmail</a>
@@ -163,9 +163,10 @@
       </div>
       <div class="col-sm-4">
       <p style="margin-top:60px;"><strong><%= user.fullname %> </strong><br>
-        <%= user.username %><br>
-        <%= user.age %><br><br>
-  
+        <b>Country:</b> <%= user.country %><br>
+        <b>Contact:</b> <%= user.mobile %><br>
+        <b>Batch:</b> <%= user.batch %><br>
+        <b>Branch:</b> <%= user.branch %><br>
   <b>eMail:</b><%= user.email %><br>
   <a href="#">View Profile</a>
                   </p>
