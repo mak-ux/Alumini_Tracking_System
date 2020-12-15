@@ -7,8 +7,8 @@ const path = require("path");
 
 const multer = require("multer");
 const User = require("../../models/user/user.js");
-const Notice = require("../../models/user/notice.js");
-const Event = require("../../models/user/event.js");
+
+
 
 const auth=require('../../authentication/user/auth')
 const {mailverification,resetpassword} = require("../../emails/mailverification");
@@ -78,9 +78,7 @@ router.get('/home',auth,async(req,res)=>{
 	res.render('Mak.ejs')
 })
 
-router.get('/event',auth,async(req,res)=>{
-	res.render('events.ejs')
-})
+
 router.get('/notish',auth,async(req,res)=>{
 	res.render('notish.ejs')
 })
@@ -132,10 +130,7 @@ router.get("/mailverification", async (req, res) => {
 	}
   });
   
-  router.get("/chat" ,(req,res) =>{
-	res.render('chat')
-  })
-
+  
   
 
 //======================================

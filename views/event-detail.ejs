@@ -114,7 +114,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/user/chat" style="color:black;">Chat</a>
         </li>
-         
+        
         <li class="nav-item">
           <a class="nav-link" href="/events/create-event" style="color:black;">Events</a>
         </li>
@@ -147,39 +147,50 @@
   
    </div>
   <!-- crosel content -->
+
   
-  <section>
-    <div class="gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h5>List Of Events</h5>
-                    <% events.forEach(function(event){ %>
-                        <div class="event-party">
-                            <figure><img src="#"  alt=""></figure>
-                            <div class="party-meta">
-                                <b>Click Below Link For details:</b> <h5><a href="/events/eventdetail/<%= event.id %>"><%= event.name %></a></h5>
-                                <b>Description:</b> <p><%= event.description %></p>
-                              
-                                
-                            </div>
-                        </div>
-                        <% }) %>
-                
-                    <div class="loadmore gap">
-                        <div class="loader">
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                        </div>
-                        <span>Loading...</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+	<section>
+		<div class="gap no-gap">
+			<div class="event-detail">
+				<div class="blog-image"><img src="/uploads/<%= event.img[0] %>" alt=""></div>
+				<div class="event-meta">
+					<div class="event-timing">
+                        <h5>welcome to <%= event.name %></h5><br><br>
+						<a href="#" title="" class="postdate"><%=event.date %> <span><%= event.month %></span> <%= event.year %></a>
+						<h5><i class="lni lni-timer"></i> From: <span><%= event.time %>: <%= event.clock %></span></h5>
+						
+					</div>
+					<div class="g-mapfull" style="height: 250px; float: left; width: 100%;">
+						<div id="map-canvas"></div>
+					</div>
+					<h2><%= event.name %></h2>
+					
+					<p>
+				        <%= event.description %>
+					</p>
+					<h5 class="main-title"></h5>
+					<div class="row merged10">
+						
+                        <% if( event){ %>
+
+							<div class="col-6">
+                               
+								<img src= "/uploads/<%= event.img %>" alt="">
+							</div>
+							
+                            <% } %>
+
+					</div>
+					<p>
+						<%= event.description %>
+					</p>
+					
+					<a class="prv" href="<%= event.websiteURL %>" title=""> Join Now <i class="lni lni-arrow-right"></i></a>
+				</div>
+			</div>
+		</div>
+	</section>
+  
   <!-- crosel content -->
   <div class="footer page-header">
     <hr>

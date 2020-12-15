@@ -5,7 +5,8 @@ const cookieParser=require('cookie-parser')
 const session=require('express-session')
 const flash=require('connect-flash')
 const methodOverride = require ('method-override')
-
+const eventroutes = require("./routes/event-routes")
+const noticeroutes = require("./routes/notice-routes")
 
 
 
@@ -53,10 +54,12 @@ app.get("/",(req,res)=>{
 });
 
 
+
+
 app.use('/user',require('./routes/user/login'));
 app.use('/user',require('./routes/user/search'));
-
-
+app.use("/events", eventroutes);
+app.use("/notice", noticeroutes);
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,function()
 		  {

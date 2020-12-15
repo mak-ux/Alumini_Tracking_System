@@ -114,7 +114,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/user/chat" style="color:black;">Chat</a>
         </li>
-         
+        
         <li class="nav-item">
           <a class="nav-link" href="/events/create-event" style="color:black;">Events</a>
         </li>
@@ -142,49 +142,111 @@
   </div>
 </nav>
    <!-- Navbar content -->
-     
+     <div class="container-fluid" style="padding: 10em; background-image:url(/images/mak.png);background-position:center;background-size:cover;background-repeat:no-repeat">
    
   
    </div>
-  <!-- crosel content -->
-  
-  <section>
-    <div class="gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h5>List Of Events</h5>
-                    <% events.forEach(function(event){ %>
-                        <div class="event-party">
-                            <figure><img src="#"  alt=""></figure>
-                            <div class="party-meta">
-                                <b>Click Below Link For details:</b> <h5><a href="/events/eventdetail/<%= event.id %>"><%= event.name %></a></h5>
-                                <b>Description:</b> <p><%= event.description %></p>
-                              
-                                
-                            </div>
-                        </div>
-                        <% }) %>
-                
-                    <div class="loadmore gap">
-                        <div class="loader">
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                        </div>
-                        <span>Loading...</span>
-                    </div>
-                </div>
-            </div>
+ <!-- crosel content -->
+ <section>
+  <div class="gap redish high-opacity">
+    <div class="content-bg-wrap" style="background: url(/images/resources/animate-bg.png)"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="head-meta">
+            <h5>Create Event</h5>
+            
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
+
+<section>
+  <div class="gap">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="new-create">
+            <span class="main-title">Create New Event and schedule</span>
+            <form method="post" class="white-form" action="/events/create-event" enctype="multipart/form-data">
+              <span>Create:</span><br><br>
+              <select>
+                <option>Educational Event</option>
+                <option>Sports Event</option>
+                <option>Social</option>
+              </select>
+              <div>
+                <input type="text" placeholder="Event Name" name="name">
+              </div>
+              <div>
+                <select name="category" id="">
+                  <option>Select Category</option>
+                  <option value="Workshop">Workshop</option>
+                  <option value="Hackathon">Hackathon</option>
+                  <option value="cultural">cultural</option>
+                </select>
+              </div>
+              <div class="setting-meta">
+                <div class="change-photo">
+                  <div class="upload-cover">
+                    <label class="fileContainer">
+                      <i class="fa fa-camera-retro"></i>
+                      Upload Event Picture (Maximum 5)
+                      <input type="file" multiple="multiple" style="display: none;" accept="image/*" name="image" >
+                      
+                    </label>
+                    <figure><img src="https://placehold.it/500x200" alt=""></figure>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <input type="text" placeholder="Website URL" name="websiteURL">
+              </div>
+              <div>
+                <textarea placeholder="Description" rows="4" name="description"></textarea>
+              </div>
+              <div class="event-time">
+                <div class="row merged-5">
+                  <div class="col-4">
+                    <input type="text" placeholder="9:00" name="time">
+                  </div>
+                  <div class="col-3">
+                    <select name="clock">
+                      <option value="AM">AM</option>
+                      <option value="PM">PM</option>
+                    </select>
+                  </div>
+                  <div class="col-5">
+                    <select name="timezone">
+                      <option value="US(UTC-8)">US (UTC-8)</option>
+                      <option value="UK (UTC-0)">UK (UTC-0)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="event-calendar">
+                <label for="datepicker">
+                  <input type="date" name="date" id="datepicker" autocomplete="off">
+                </label>	
+              </div>
+              <button type="submit" class="main-btn">Create Now</button>
+            </form>
+          </div>	
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- crosel content -->
-  <div class="footer page-header">
-    <hr>
-    <p class="mute" style="margin-left:500px;">2020 ©</p>
+ 
+ <div class="footer page-header">
+  <hr>
+  <p class="mute" style="margin-left:500px;">2020 © </p>
 </div>
+    
 <!-- thumbnail content -->
     <!-- Optional JavaScript -->
     <!-- Popper.js first, then Bootstrap JS -->
