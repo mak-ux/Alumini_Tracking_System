@@ -68,12 +68,8 @@ router.get("/forget",(req,res)=>{
 //<------------> USER profile<---------------->
 
 
-router.get('/setting',auth,async(req,res)=>{
-	res.render('setting.ejs')
-})
-router.get('/notification',auth,async(req,res)=>{
-	res.render('notification.ejs')
-})
+
+
 router.get('/home',auth,async(req,res)=>{
 	res.render('Mak.ejs')
 })

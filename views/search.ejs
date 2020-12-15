@@ -128,10 +128,9 @@
       <li class="nav-item">
       <a class="nav-link" href="/user/logout" style="color:black;">Logout</a>
     </li>
-    <form method="post" action="/user/search" style="margin-left: 200px;">
-        <input type="text" size="20" name="query"></textarea>
-        <input type="submit" value="Search Alumini" class="submitButton" ">
-     </form>
+    <li class="nav-item">
+      <a class="nav-link" href="/search" style="color:black;">Click Here To Search Alumini</a>
+    </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
         </li>
@@ -150,7 +149,41 @@
   
 <!-- crosel content -->
   <!-- crosel content -->
- 
+  <div class="container">
+    <div class="row">
+        <h1 style="text-align: center;">Search For Alumini</h1>
+        <div style="width: 30%; margin: 30px auto;">
+            <form action="/search/search1" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="fullname" placeholder="name">
+                </div>
+
+
+                <div class="form-group">
+                    <input class="form-control" type="text" name="college" placeholder="college">
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" type="text" name="branch" placeholder="branch">
+                </div>
+
+
+                <div class="form-group">
+                    <input class="form-control" type="text" name="batch" placeholder="batch">
+                </div>
+
+
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Search!</button>
+                </div>
+
+
+            </form>
+           
+        </div>
+
+    </div>
+</div>
     <!-- add content -->
    
    

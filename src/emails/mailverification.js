@@ -63,4 +63,5 @@ const resetpassword=async(emailid)=>{
 module.exports={
     mailverification,
     resetpassword
+  
 }

@@ -7,6 +7,9 @@ const flash=require('connect-flash')
 const methodOverride = require ('method-override')
 const eventroutes = require("./routes/event-routes")
 const noticeroutes = require("./routes/notice-routes")
+const searchroutes = require("./routes/search")
+const emailroutes = require("./routes/email")
+const messageroutes = require("./routes/sendmessage")
 
 
 
@@ -49,17 +52,16 @@ app.use((req,res,next)=>{
 
 
 
-app.get("/",(req,res)=>{
-	res.redirect('/user/create')
-});
-
 
 
 
 app.use('/user',require('./routes/user/login'));
-app.use('/user',require('./routes/user/search'));
+//app.use('/user',require('./routes/user/search'));
 app.use("/events", eventroutes);
 app.use("/notice", noticeroutes);
+app.use("/search", searchroutes);
+app.use("/email", emailroutes);
+app.use("/message", messageroutes);
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,function()
 		  {
