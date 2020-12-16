@@ -57,11 +57,11 @@ router.post("/search1", function(req, res) {
         } else {
 
             alumni.forEach(function(alumni_) {
-                console.log(alumni_.fullname + " HAHA");
+                console.log(alumni_.fullname);
             });
 
-            //res.render("index.ejs", { alumni: alumni });
-            res.send({ alumni: alumni })
+            res.render("list_alumini.ejs", { alumini: alumni });
+            //res.send({ alumni: alumni })
         }
 
     });

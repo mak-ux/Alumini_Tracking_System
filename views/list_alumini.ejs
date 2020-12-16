@@ -1,9 +1,6 @@
 <%- include('./partials/header.ejs')%>
    <!-- Navbar content -->
-    
-   
-  
-   </div>
+     
   <!-- crosel content -->
   
 <!-- crosel content -->
@@ -13,18 +10,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h5>List Of Notice</h5>
+                    <h5>List Of Aluminies</h5>
                     <ul>
-                    <% notice.forEach(function(notice){ %>
+                    <% alumini.forEach(function(alumini){ %>
                         
                         <div class="event-party">
                             
-                            <figure><img src="#"  alt=""></figure>
+                            <img src="/upload/<%= alumini.userImage %>" class="img-thumbnail mx-auto mt-5 mb-5 d-block" alt="..." width="150px" height="150px">
                             <div class="party-meta">
                                 <li>
-                                <h5><%= notice.title %></a></h5>
-                                <b>Description:</b> <p><%= notice.description %></p>
-                                <b>Publlished Date:</b><span><%= notice.date %></span>/<span><%= notice.month %></span>/<span><%= notice.year %></span>
+                                <h5><%= alumini.fullname %></h5>
+                                <b>Collage:</b> <span><%=alumini.college %></span><br>
+                                <b>Batch:</b><span><%= alumini.batch %></span><br>
+                                <b>Email:</b><span><%= alumini.email %></span><br>
+                                <b>Branch:</b><span><%= alumini.branch %></span>
                             </li>
                                 
                             </div>
@@ -50,7 +49,5 @@
 </section>
     <!-- add content -->
    
-  
-  
-  
+ 
     <%- include('./partials/footer.ejs')%>

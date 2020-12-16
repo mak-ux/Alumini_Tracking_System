@@ -10,6 +10,7 @@ const noticeroutes = require("./routes/notice-routes")
 const searchroutes = require("./routes/search")
 const emailroutes = require("./routes/email")
 const messageroutes = require("./routes/sendmessage")
+const listroutes = require("./routes/list")
 
 
 
@@ -51,6 +52,9 @@ app.use((req,res,next)=>{
 })
 
 
+app.get("/",(req,res)=>{
+	res.redirect('/user/create')
+});
 
 
 
@@ -62,6 +66,7 @@ app.use("/notice", noticeroutes);
 app.use("/search", searchroutes);
 app.use("/email", emailroutes);
 app.use("/message", messageroutes);
+app.use("/list", listroutes);
 const PORT = process.env.PORT || 3000;
 app.listen(PORT,function()
 		  {

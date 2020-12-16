@@ -285,6 +285,8 @@ router.post("/reset-password", async (req, res) => {
 	newUser = (await User.findById(req.user._id))
 	res.render('alumini.ejs',{user:newUser})
 })
+ 
+
 
 /*router.get('/search',auth,async(req,res)=>{
     try{
