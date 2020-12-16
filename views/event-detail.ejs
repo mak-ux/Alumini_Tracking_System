@@ -6,11 +6,11 @@
   
   <!-- crosel content -->
 
-  
 	<section>
 		<div class="gap no-gap">
 			<div class="event-detail">
-				<div class="blog-image"><img src="/uploads/<%= event.img[0] %>" alt=""></div>
+				<div class="blog-image">
+					
 				<div class="event-meta">
 					<div class="event-timing">
                         <h5>welcome to <%= event.name %></h5><br><br>
@@ -18,9 +18,9 @@
 						<h5><i class="lni lni-timer"></i> From: <span><%= event.time %>: <%= event.clock %></span></h5>
 						
 					</div>
-					<div class="g-mapfull" style="height: 250px; float: left; width: 100%;">
-						<div id="map-canvas"></div>
-					</div>
+					
+  
+					
 					<h2><%= event.name %></h2>
 					
 					<p>
@@ -33,7 +33,10 @@
 
 							<div class="col-6">
                                
-								<img src= "/uploads/<%= event.img %>" alt="">
+								<img style=" border: 1px solid #ddd;
+								border-radius: 4px;
+								padding: 5px;
+								width: 800px;" src= "/uploads/<%= event.img[0] %>" alt="">
 							</div>
 							
                             <% } %>

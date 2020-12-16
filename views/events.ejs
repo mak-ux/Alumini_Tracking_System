@@ -9,7 +9,10 @@
                     <h5>List Of Events</h5>
                     <% events.forEach(function(event){ %>
                         <div class="event-party">
-                            <figure><img src="#"  alt=""></figure>
+                            <img style=" border: 1px solid #ddd;
+                            border-radius: 4px;
+                            padding: 5px;
+                            width: 150px;"src="/uploads/<%= event.img[0] %>" alt="">
                             <div class="party-meta">
                                 <b>Click Below Link For details:</b> <h5><a href="/events/eventdetail/<%= event.id %>"><%= event.name %></a></h5>
                                 <b>Description:</b> <p><%= event.description %></p>

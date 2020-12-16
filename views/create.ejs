@@ -7,14 +7,26 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>create account</title>
+	<style>
+		/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  
+  width: 100%;
+  height: auto;
+}
+
+
+
+	</style>
 </head>
-<body style="background-color: aqua;">
+<body >
 	<div class="form_bg">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-offset-4 col-md-4  col-sm-offset-3 col-sm-6">
 					<div class="form_horizontal">
-					<div ><img src="/images/logo.png" class="logo"alt="logo-img"></div>
+					<div ><img src="/images/logo.png" class="logo"alt="logo-img"></div><br><br>
 					
 					<button class="btn signin"><a href="/user/signin"><i class="fa fa-sign-in" aria-hidden="true"></i>login to your account</a></button>
 					<div class="lines">
@@ -26,8 +38,11 @@
 			</div>
 		</div>
 	</div>
+	<video id="myVideo" autoplay muted loop>
+		<source src="/videos/mak.mp4">
+	  </video>
+
+
 	
-
-
 </body>
 </html>
