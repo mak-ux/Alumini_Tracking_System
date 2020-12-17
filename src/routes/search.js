@@ -70,4 +70,33 @@ router.post("/search1", function(req, res) {
 
     
 });
+router.post("/test", function(req, res) {
+
+    var alumni = req.body;
+    var fullname=req.body.fullname;
+
+
+        User.find({"fullname" :fullname }, async(err, alumni)=> {
+
+        if (err) {
+            console.log(err);
+            console.log("OOPS there's an error");
+
+        } else {
+
+            alumni.forEach(function(alumni_) {
+                console.log(alumni_.fullname);
+            });
+
+            res.render("list_alumini.ejs", { alumini: alumni });
+            //res.send({ alumni: alumni })
+        }
+
+    });
+
+
+
+    
+});
 module.exports = router;
+

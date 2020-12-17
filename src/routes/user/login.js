@@ -245,7 +245,7 @@ router.post('/forget-password',async(req,res)=>{
 			resetpassword(req.body.email);
 			message='Check you emailid and reset your password.'
 		}
-		res.render("reset.ejs")
+		res.redirect("/user/forget")
 		console.log('reset link send');
 	}catch(e){
 		//res.render('message-reset.ejs',{message:null,error:'Server error'})
@@ -254,7 +254,9 @@ router.post('/forget-password',async(req,res)=>{
 })
 //My new routes
 
-
+router.get("/reset-password", async (req, res) => {
+	res.render("reset")
+})
 //my new routes
 
 router.post("/reset-password", async (req, res) => {
@@ -273,6 +275,7 @@ router.post("/reset-password", async (req, res) => {
 		await user.save();
 		message = "Password changed sucessfully";
 	  }
+	  //res.render('reset',{token:token})
 	  res.redirect('/user/signin')
 	} catch (e) {
 		res.send('oops')

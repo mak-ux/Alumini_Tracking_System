@@ -23,7 +23,10 @@
                                 <b>Collage:</b> <span><%=alumini.college %></span><br>
                                 <b>Batch:</b><span><%= alumini.batch %></span><br>
                                 <b>Email:</b><span><%= alumini.email %></span><br>
-                                <b>Branch:</b><span><%= alumini.branch %></span>
+                                <b>Branch:</b><span><%= alumini.branch %></span><br>
+                                 <b>Contact:</b><span><%= alumini.mobile %></span><br>
+                                 <b>Send Email:</b><a href="/email/alumni/<%= alumini.id %>/email">Click To Send</a><br>
+                                 <b>Send Message:</b><a href="/message/alumni/<%= alumini.id %>/message">Click To Send</a>
                             </li>
                                 
                             </div>

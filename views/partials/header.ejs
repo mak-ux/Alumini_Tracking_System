@@ -57,6 +57,34 @@
     	    
     	
     	}
+      * {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 10px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 20px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
     </style>
      
      <body style="background-color:#1ac5d6">
@@ -132,6 +160,14 @@
     
     <li class="nav-item">
       <a class="nav-link" href="/search" style="color:black;">Click Here To Search Alumini</a>
+    </li>
+     
+    <li class="nav-item">
+     
+      <form class="d-flex"  action="/search/test" method="post">
+        <input class="form-control mr-2" type="text" placeholder="Search Alumini" name="fullname" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
