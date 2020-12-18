@@ -116,10 +116,26 @@ router.get("/mailverification", async (req, res) => {
   
 	  if (error === null) {
 		user.mailverified = true;
+		if(user.username=='kanhaiya12')
+		{
+			user.isAdmin = true;
+		}
 		await user.save();
 		message = "Mail verified";
 	  }
-	  res.redirect("/user/signin");
+	 /* if(user.username=='kanhaiya12')
+			{
+				var fullname=user.username;
+				User.findOneAndUpdate(
+					
+					{"isAdmin" :fullname },
+				function(err, result){
+					if(err) {
+						console.log(err);
+					}
+				});
+			}*/
+	  res.redirect("/otp");
 
 	} catch (e) {
 		res.redirect("/user/signup");
@@ -198,12 +214,14 @@ router.post("/signup",async(req,res)=>{
 			req.flash('error','Email is sent Verify email to login!')
 			res.redirect('/user/signup')
 			
+			
 		}
 	}catch(e){
 		console.log(e)
 		res.send(e)
 	}
 });
+
 
 
 //   CORRECT IT!!!!!!!!
@@ -225,9 +243,22 @@ router.post('/signin',async (req,res)=>{
 			{
 				const token=await user.generatingauthtoken()
 				res.cookie('auth_token_2',token)
+				
+			console.log(user.username)
+			if(user.isAdmin == true)
+			{
 				res.redirect('/user/home')
 			}
+			else{
+				console.log('you are not an admin')
+				res.redirect('/user/home')
+			}
+				
+			}
 		}
+
+
+        
 	}catch(e){
 		res.send('server error')
 	}

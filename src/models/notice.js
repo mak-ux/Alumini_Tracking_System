@@ -10,7 +10,8 @@ const noticeSchema = new Schema({
 
     date :{type: Number},
     month: {type:String},
-    year: {type: Number}
+    year: {type: Number},
+    creater:{type: String,default:'HOD'}
 })
 
 module.exports = mongoose.model("Notice" , noticeSchema);

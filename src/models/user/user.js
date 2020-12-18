@@ -70,15 +70,27 @@ const userSchema = new mongoose.Schema({
 	},
 	
 	
-	isAdmin:Boolean,
+	isAdmin:{
+		type:Boolean,
+		default:false
+	},
+	address:{
+		type:String,
+		
+	},
+	city:{
+		type:String,
+		
+	},
+	mobile:{
+		type:String,
+		
+	},
 	branch: String,
 	batch: String,
 	college: String,
-	address: String,
-    city: String,
     state: String,
 	country: String,
-	mobile: String,
 	
 	  
 	 

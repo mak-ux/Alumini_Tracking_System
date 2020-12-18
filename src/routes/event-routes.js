@@ -3,6 +3,8 @@ const app =  express();
 const multer = require('multer')
 const router = express.Router();
 const mongoose = require("mongoose");
+const User = require("../models/user/user.js");
+const auth=require('../authentication/user/auth')
 
 
 const Event = require("../models/events");
@@ -28,9 +30,19 @@ router.get("/", (req,res,next) =>{
 })
 
 
-router.get("/create-event", (req,res,next) =>{
-    res.render("create-event")
-
+router.get("/create-event", auth,async(req,res,next) =>{
+    
+    user = (await User.findById(req.user._id))
+    console.log(user)
+    if(user.isAdmin==true)
+    {
+        res.render("create-event")
+    }
+    else
+    {
+        res.render("Mak")
+    }
+    //res.render("create-event")
 })
 
 var storage = multer.diskStorage({ 

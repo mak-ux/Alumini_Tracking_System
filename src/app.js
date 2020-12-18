@@ -11,8 +11,14 @@ const searchroutes = require("./routes/search")
 const emailroutes = require("./routes/email")
 const messageroutes = require("./routes/sendmessage")
 const listroutes = require("./routes/list")
+const updateroutes = require("./routes/update")
+const otproutes = require("./routes/otp")
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
 
+const User = require("./models/user/user.js");
 
+const auth=require('./authentication/user/auth')
 
 
 //FOR POSTMAN
@@ -67,8 +73,36 @@ app.use("/search", searchroutes);
 app.use("/email", emailroutes);
 app.use("/message", messageroutes);
 app.use("/list", listroutes);
+app.use("/update", updateroutes);
+app.use("/otp", otproutes);
+//chat section
+app.get('/chat',auth, async(req, res)=>{
+	user = (await User.findById(req.user._id))
+    console.log(user)
+    res.render('index1.ejs',{user:user});
+});
+
+io.sockets.on('connection', function(socket) {
+    socket.on('username', function(username) {
+		socket.username = username;
+		console.log(socket.username)
+        io.emit('is_online', ' <i>' + socket.username + ' join the chat..</i>');
+    });
+
+    socket.on('disconnect', function(username) {
+		
+        io.emit('is_online', ' <i>' + socket.username + ' left the chat..</i>');
+    })
+
+    socket.on('chat_message', function(message) {
+		console.log(message)
+		io.emit('chat_message', '<strong>' + socket.username + '</strong>: ' + message);
+		
+    });
+
+});
 const PORT = process.env.PORT || 3000;
-app.listen(PORT,function()
+server.listen(PORT,function()
 		  {
 	console.log(`Server has started at ${PORT}`);
 });
