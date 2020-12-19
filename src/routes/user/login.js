@@ -7,11 +7,12 @@ const path = require("path");
 
 const multer = require("multer");
 const User = require("../../models/user/user.js");
+const Admin = require("../../models/user/admin.js");
 
 
 
 const auth=require('../../authentication/user/auth')
-const {mailverification,resetpassword} = require("../../emails/mailverification");
+const {mailverification,resetpassword,collageverification} = require("../../emails/mailverification");
 const bcryptjs=require('bcryptjs')
 const jwt=require('jsonwebtoken');
 
@@ -79,6 +80,28 @@ router.get('/notish',auth,async(req,res)=>{
 	res.render('notish.ejs')
 })
 
+router.get('/form',auth,async(req,res)=>{
+	Admin.find({ }, function(err, alumni) {
+
+        if (err) {
+            console.log(err);
+            console.log("OOPS there's an error");
+
+        } else {
+
+            alumni.forEach(function(alumni_) {
+				console.log(alumni_.name );
+				 
+            });
+
+            //res.render("list_alumini.ejs", { alumini: alumni });
+    //res.send({ alumni: alumni })
+        }
+
+    });
+	
+	res.render('form.ejs')
+})
 
 // USER profile
 
@@ -96,6 +119,26 @@ router.get('/logout',auth,async(req,res)=>{
 })
 //new field
 
+router.post('/admin',auth,async(req,res)=>{
+const user = await User.findById(req.user._id)
+	     
+		   //const Admin=new Admin();
+		   new Admin({
+			
+			name: req.body.name
+			
+			}).save(async(err, doc)=>{
+			if(err) res.json(err);
+			else {
+				
+				res.redirect('/user/home')
+			}
+			
+			});
+			//user.admin.push(Admin._id);
+			//await user.save();
+			//console.log(Admin._id)		
+})
 
 
 //new field
@@ -135,7 +178,16 @@ router.get("/mailverification", async (req, res) => {
 					}
 				});
 			}*/
-	  res.redirect("/otp");
+			if(user.collageverified==true && user.mailverified==true)
+		{
+			res.redirect('/user/signin');
+		}
+		else{
+			//res.send('You Verified you email wait for your collage to verify your identity,Again Click Your gmail link Once your collage verified you')
+			res.render('verify_student')
+		}
+			//res.redirect('/user/signin')
+			//res.send('wait For your collage to verify Your identity')
 
 	} catch (e) {
 		res.redirect("/user/signup");
@@ -143,7 +195,48 @@ router.get("/mailverification", async (req, res) => {
   });
   
   
+  //collage verify
+  router.get("/collageverification", async (req, res) => {
+	try {
+	  const token = req.query.token;
+	  const decode = jwt.verify(token, "thisismyjwtsecret");
   
+	  var message = null,
+		error = null;
+	  if (decode.type !== "collageverification") error = "Wrong token";
+  
+	  const user = await User.findById({ _id: decode._id });
+	  if (!user) error = "Invalid user";
+  
+	  if (error === null) {
+		user.collageverified = true;
+		if(user.username=='kanhaiya12')
+		{
+			user.isAdmin = true;
+		}
+		await user.save();
+		message = "Mail verified by collage";
+	  }
+	 /* if(user.username=='kanhaiya12')
+			{
+				var fullname=user.username;
+				User.findOneAndUpdate(
+					
+					{"isAdmin" :fullname },
+				function(err, result){
+					if(err) {
+						console.log(err);
+					}
+				});
+			}*/
+			//res.redirect('/user/signin')
+			//res.send('Thank You,You verified You alumini')
+			res.render('verify_collage')
+
+	} catch (e) {
+		res.redirect("/user/signup");
+	}
+  });
 
 //======================================
 //
@@ -211,6 +304,7 @@ router.post("/signup",async(req,res)=>{
 			await user.save()
 			
 			mailverification(user.email, user._id);
+			collageverification('kl.ecerasystem@gmail.com', user._id,user.fullname,user.batch);
 			req.flash('error','Email is sent Verify email to login!')
 			res.redirect('/user/signup')
 			
@@ -227,11 +321,14 @@ router.post("/signup",async(req,res)=>{
 //   CORRECT IT!!!!!!!!
 router.post('/signin',async (req,res)=>{
 	try{
-		const user=await User.findOne({username:req.body.username})
+		const user=await User.findOne({username:req.body.username,mobile:req.body.mobile})
+		//const user1=await User.findOne({mobile:req.body.mobile})
+		//console.log(user1)
 		if(!user){
-			req.flash('error','Username is not registered')
+			req.flash('error','Username/mobile is not valid')
 			res.redirect('/user/signin')
-		}
+		} 
+		
 		else
 		{
 			const isMatch=await bcryptjs.compare(req.body.password,user.password)
@@ -247,11 +344,11 @@ router.post('/signin',async (req,res)=>{
 			console.log(user.username)
 			if(user.isAdmin == true)
 			{
-				res.redirect('/user/home')
+				res.redirect("/user/home");
 			}
 			else{
 				console.log('you are not an admin')
-				res.redirect('/user/home')
+				res.redirect("/otp");
 			}
 				
 			}

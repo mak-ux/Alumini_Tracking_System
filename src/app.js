@@ -76,7 +76,7 @@ app.use("/list", listroutes);
 app.use("/update", updateroutes);
 app.use("/otp", otproutes);
 //chat section
-app.get('/chat',auth, async(req, res)=>{
+app.get('/user/chat',auth, async(req, res)=>{
 	user = (await User.findById(req.user._id))
     console.log(user)
     res.render('index1.ejs',{user:user});

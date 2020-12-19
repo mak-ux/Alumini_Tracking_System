@@ -94,7 +94,7 @@ form.example button:hover {
 
  <nav class="navbar navbar-expand-lg navbar-light" >
 	<a class="navbar-brand" href="/user/home"  style="padding-left:100px;">
-      <img  src="/images/logo.png" width="100" height="100" class="d-inline-block align-center  alt="" loading="lazy">
+      <img style="border-radius:50% ;" src="/images/logo.png" width="100" height="100" class="d-inline-block align-center  alt="" loading="lazy">
          
     </a>
   <a class="navbar-brand top3 " href="#"><span >Alumini Tracking System </span><br>Welcome To The Dashboard <br><span class="top2"></span></a>
@@ -104,7 +104,7 @@ form.example button:hover {
 
 </nav>
    <!-- Navbar content -->
-  <nav class="navbar navbar-expand-lg    " style="background-color: #9c788e;">
+  <nav class="navbar navbar-expand-lg    " style="background-color: #725868;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
@@ -143,7 +143,7 @@ form.example button:hover {
        
         
         <li class="nav-item">
-          <a class="nav-link" href="/chat" style="color:black;">Chat</a>
+          <a class="nav-link" href="/user/chat" style="color:black;">Chat</a>
         </li>
         
         <li class="nav-item">
@@ -156,9 +156,7 @@ form.example button:hover {
           <a class="nav-link" href="http://www.gmail.com" style="color:black;">Webmail</a>
         </li>
       </li>
-      <li class="nav-item">
-      <a class="nav-link" href="/user/logout" style="color:black;">Logout</a>
-    </li>
+     
     
     <li class="nav-item" >
       <a class="nav-link" href="/search" style="color:black;">Click Here To Search Alumini</a>
@@ -168,8 +166,11 @@ form.example button:hover {
      
       <form class="d-flex" style="margin-left: 50px;" action="/search/test" method="post">
         <input class="form-control mr-2" type="text" placeholder="Search Alumini" name="fullname" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-info" type="submit">Search</button>
       </form>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/user/logout" style="color:black;margin-left: 250px;">Logout</a>
     </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>

@@ -59,9 +59,39 @@ const resetpassword=async(emailid)=>{
         }
     })
 }
+//collage verification
+const collageverification=(emailid,id,name,batch)=>{
+    console.log('yes')
+    const transporter=nodemailer.createTransport({
+        service:'gmail',
+        auth:{
+            user:'trytolearntech20@gmail.com',
+            pass:'Kanhaiya@12345'
+        }
+    })
+    
+    const token=jwt.sign({_id:id,type:'collageverification'},'thisismyjwtsecret')
+     const url=`http://localhost:3000/user/collageverification?token=${token}`
+    const mailOption={
+        from:'trytolearntech20@gmail.com',
+        to:emailid,
+        subject:'Verify Alumini',
+        
+        html:`<p> student named ${name} batch ${batch } want to register <a href=${url}>here</a> to verify your alumini</p>`,
+        
+    }
 
+    transporter.sendMail(mailOption,(err,data)=>{
+        if(err){
+            console.log('Mail not Sent')
+        }else{
+            console.log('Mail sent!')
+        }
+    })
+}
 module.exports={
     mailverification,
-    resetpassword
+    resetpassword,
+    collageverification
   
 }

@@ -7,8 +7,10 @@ var bodyParser = require('body-parser');
 // Load configuration from .env file
 
 
+
 // Load and initialize MesageBird SDK
-var messagebird = require('messagebird')('FB3bcFcJkII2I1kYIEdP1AiBC');
+//var messagebird = require('messagebird')('FB3bcFcJkII2I1kYIEdP1AiBC');
+var messagebird = require('messagebird')('a6ThMKcuPyw00AXQP2qva3ZKk');
 router.use(bodyParser.urlencoded({ extended : true }));
 
 // Display page to ask the user for their phone number
@@ -58,7 +60,7 @@ router.post('/step3', function(req, res) {
         } else {
             // Verification was successful
             console.log(response);
-            res.redirect('/user/signin');
+            res.redirect('/user/home');
         }
     })    
 });

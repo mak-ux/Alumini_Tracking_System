@@ -56,6 +56,10 @@ const userSchema = new mongoose.Schema({
 		type:Boolean,
 		default:false
 	},
+	collageverified:{
+		type:Boolean,
+		default:false
+	},
 	gender:{
 		type:String,
 	},
@@ -84,6 +88,9 @@ const userSchema = new mongoose.Schema({
 	},
 	mobile:{
 		type:String,
+		required:true,
+		unique:true,
+		trim:true
 		
 	},
 	branch: String,
@@ -91,10 +98,17 @@ const userSchema = new mongoose.Schema({
 	college: String,
     state: String,
 	country: String,
+	admin: [
+		{
+		  type: mongoose.Schema.Types.ObjectId,
+		  ref: "Admin"
+		 
+		}
+	  ]
 	
 	  
 	 
-	 
+	
 });
 
 userSchema.methods.generatingauthtoken=async function(){
