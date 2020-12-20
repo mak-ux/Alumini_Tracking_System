@@ -44,7 +44,7 @@ router.post("/alumni/:id/message", function(req, res) {
         } else {
             res.redirect("/search/");
             receiver = foundalumni.mobile;
-           var options = {authorization : "PYohrtHOD2wNcjubslMBWRq0gLiUQGIKS1zVeFd946C8nxv35AIN325JKHhSWnuariEMfLcCtvesR0XT" , message : message ,  numbers : [receiver]} ;
+           var options = {authorization :  , message : message ,  numbers : [receiver]} ;
                 fast2sms.sendMessage(options) .then(response=>{
       console.log(response)
     }) .catch((error) => {
