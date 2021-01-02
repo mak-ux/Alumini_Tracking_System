@@ -1,0 +1,46 @@
+<%- include('./partials/header.ejs')%>
+   <!-- Navbar content -->
+     
+   
+  
+  
+  <!-- crosel content -->
+
+	<section>
+		<div class="gap no-gap" style="margin-left: 250px;">
+			<div class="event-detail">
+				<div class="blog-image">
+					
+				<div class="event-meta">
+					<div class="event-timing">
+                        <h5>welcome to <%= jobs.type %></h5><br><br>
+						<a href="#" title="" class="postdate"><%=jobs.date %> <span><%= jobs.month %></span> <%= jobs.year %></a>
+						
+						
+					</div>
+					
+  
+                    <h2><%= jobs.type %></h2>
+                    <h2><%= jobs.position %></h2>
+                   
+					<h2><%= jobs.position %></h2>
+					<p>
+				        <%= jobs.category %>
+					</p>
+					
+					<div><p>
+						<%= jobs.description %>
+                    </p></div>
+                    <div><p>
+						<%= jobs.creater %>
+					</p></div>
+					
+					
+					<a class="prv" href="<%= jobs.jobURL %>" title=""> apply Now <i class="lni lni-arrow-right"></i></a>
+				</div>
+			</div>
+		</div>
+	</section>
+  
+  <!-- crosel content -->
+ 

@@ -13,6 +13,7 @@ const messageroutes = require("./routes/sendmessage")
 const listroutes = require("./routes/list")
 const updateroutes = require("./routes/update")
 const otproutes = require("./routes/otp")
+const jobroutes = require("./routes/job")
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 
@@ -75,6 +76,7 @@ app.use("/message", messageroutes);
 app.use("/list", listroutes);
 app.use("/update", updateroutes);
 app.use("/otp", otproutes);
+app.use("/job", jobroutes);
 //chat section
 app.get('/user/chat',auth, async(req, res)=>{
 	user = (await User.findById(req.user._id))

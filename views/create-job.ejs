@@ -1,0 +1,73 @@
+<%- include('./partials/header.ejs')%>
+   <!-- Navbar content -->
+     <div class="container-fluid" style="padding: 10em; background-image:url(/images/mak.png);background-position:center;background-size:cover;background-repeat:no-repeat">
+   
+  
+   </div>
+ <!-- crosel content -->
+ <section>
+  <div class="gap redish high-opacity">
+    <div class="content-bg-wrap" style="background: url(/images/resources/animate-bg.png)"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="head-meta">
+            <h5>Post Jobs</h5>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="gap">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="new-create">
+            <span class="main-title">Post New Job </span>
+            <form method="post" class="white-form" action="/job/create-job" >
+              <span>Post:</span><br><br>
+              <select  name="type">
+                <option>Select Type</option>
+                <option>Fulltime</option>
+                <option>Intern</option>
+              </select>
+              
+              <div>
+                <select name="position" id="">
+                  <option>Select Position</option>
+                  <option value="Workshop">Software Developer</option>
+                  <option value="Hackathon">IT Positions</option>
+                  <option value="cultural">Brand Ambessoder</option>
+                  <option value="cultural">Machine Learning Engineer</option>
+                  <option value="cultural">Full Stack Developer</option>
+                </select>
+              </div>
+              
+              <div>
+                <input type="text" placeholder="Website URL" name="jobURL">
+              </div>
+              <div>
+                <textarea placeholder="Description" rows="4" name="description"></textarea>
+              </div>
+              
+              <div class="event-calendar">
+                <label for="datepicker">
+                  <input type="date" name="date" id="datepicker" autocomplete="off">
+                </label>	
+              </div>
+              <button type="submit" class="main-btn">Post Now</button>
+            </form>
+          </div>	
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- crosel content -->
+ 
+  <%- include('./partials/footer.ejs')%>
