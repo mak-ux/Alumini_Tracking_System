@@ -6,15 +6,14 @@ const mailverification=(emailid,id)=>{
     const transporter=nodemailer.createTransport({
         service:'gmail',
         auth:{
-            user:'trytolearntech20@gmail.com',
-            pass:'Kanhaiya@12345'
+            
         }
     })
     
     const token=jwt.sign({_id:id,type:'mailverification'},'thisismyjwtsecret')
      const url=`http://localhost:3000/user/mailverification?token=${token}`
     const mailOption={
-        from:'trytolearntech20@gmail.com',
+        
         to:emailid,
         subject:'Verify your gmail',
         
@@ -36,16 +35,14 @@ const resetpassword=async(emailid)=>{
     const transporter=nodemailer.createTransport({
         service:'gmail',
         auth:{
-            user:'trytolearntech20@gmail.com',
-            pass:'Kanhaiya@12345'
+            
         }
     })
 
     const token=jwt.sign({emailid,type:'resetpassword'},'thisismyjwtsecret2')
    const url=`http://localhost:3000/user/reset-password?token=${token}`
     const mailOption={
-        from:'trytolearntech20@gmail.com',
-        to:emailid,
+        
         subject:'Reset your passowrd',
         html:`<p>Click <a href=${url}>here</a> to reset your password</p>`
     }
@@ -65,8 +62,7 @@ const collageverification=(emailid,id,name,batch)=>{
     const transporter=nodemailer.createTransport({
         service:'gmail',
         auth:{
-            user:'trytolearntech20@gmail.com',
-            pass:'Kanhaiya@12345'
+          
         }
     })
     
