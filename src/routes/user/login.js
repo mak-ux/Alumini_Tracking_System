@@ -304,7 +304,7 @@ router.post("/signup",async(req,res)=>{
 			await user.save()
 			
 			mailverification(user.email, user._id);
-			collageverification('makdu1998@gmail.com', user._id,user.fullname,user.batch);
+			collageverification('kainhaiyalal@gmail.com', user._id,user.fullname,user.batch);
 			req.flash('error','Email is sent Verify email to login!')
 			res.redirect('/user/signup')
 			
