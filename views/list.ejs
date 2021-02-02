@@ -1,0 +1,18 @@
+<!-- views/posts.ejs -->
+<div>
+    <% items.forEach(function(item) { %>
+      <ul>
+        <li><%= item.thumbnailUrl %></li>
+        <li><%= item.id %></li>
+        <li><%= item.title %></li>
+        <li><%= item.url %></li>
+        <li>
+            <form action="/data" method="POST">
+                <input type="button" value="Post Data">
+            </form>
+           
+
+        </li>
+      </ul>
+    <% }); %>
+  </div>

@@ -1,57 +1,41 @@
 <%- include('./partials/header.ejs')%>
    <!-- Navbar content -->
-    
    
-  
-   </div>
-  <!-- crosel content -->
-  
-<!-- crosel content -->
-  <!-- crosel content -->
-  <section>
-    <div class="gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h5>List Of Notice</h5>
-                    <ul>
-                    <% notice.forEach(function(notice){ %>
-                        
-                        <div class="event-party">
-                            
-                            <figure><img src="#"  alt=""></figure>
-                            <div class="party-meta">
-                                <li>
-                                <h5><%= notice.title %></a></h5>
-                                <b>Description:</b> <span><%= notice.description %></span><br>
-                                <b>Publlished Date:</b><span><%= notice.date %></span>/<span><%= notice.month %></span>/<span><%= notice.year %></span><br>
-                                <b>Published By:</b> <span><%= notice.creater %></span>
-                            </li>
-                                
-                            </div>
-                        
+   <section>
+            <div class="gap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="title"><h5> Notice</h5></label>
                         </div>
-                    
+                    <div class="col-75">
+                <ul>
+                    <% notice.forEach(function(notice){ %>
+                        <li>
+                            <h5><%= notice.title %></a></h5>
+                            <b>Description:</b> <span><%= notice.description %></span><br>
+                            <b>Publlished Date:</b><span><%= notice.date %></span>/<span><%= notice.month %></span>/<span><%= notice.year %></span><br>
+                            <b>Published By:</b> <span><%= notice.creater %></span>
+                        </li>
+                        <br>
                         <% }) %>
                     </ul>
-                
-                    <div class="loadmore gap">
-                        <div class="loader">
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                        </div>
-                        <span>Loading...</span>
-                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-    <!-- add content -->
-   
-  
-  
-  
-    <%- include('./partials/footer.ejs')%>
+            
+            
+    </section>
+<%- include('./partials/footer.ejs')%>
+    
+        
+                        
+                        
+                        
+                                
+                                
+                            
+                        
+                    
+                         
+                        
+                    

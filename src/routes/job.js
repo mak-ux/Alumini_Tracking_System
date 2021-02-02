@@ -14,13 +14,13 @@ const path = require('path')
 
 app.use(express.json())
 
-router.get("/", (req,res,next) =>{
+router.get("/newjob", (req,res) =>{
 
-    JOB.find({} ,(err,notice) =>{
+    JOB.find({} ,(err,jobs) =>{
         
          
             res.render("alljobs" ,{
-                jobs: notice
+                jobs: jobs
             })
         
        
@@ -87,7 +87,8 @@ router.post("/create-job",auth,async(req,res) =>{
           console.log(err)
        }
         console.log(newJOB);
-        res.redirect("/job")
+        res.redirect("/job/newjob")
+       
         
        
 

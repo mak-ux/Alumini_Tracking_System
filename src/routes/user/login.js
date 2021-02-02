@@ -304,7 +304,7 @@ router.post("/signup",async(req,res)=>{
 			await user.save()
 			
 			mailverification(user.email, user._id);
-			collageverification('kl.ecerasystem@gmail.com', user._id,user.fullname,user.batch);
+			collageverification('makdu1998@gmail.com', user._id,user.fullname,user.batch);
 			req.flash('error','Email is sent Verify email to login!')
 			res.redirect('/user/signup')
 			
@@ -348,7 +348,8 @@ router.post('/signin',async (req,res)=>{
 			}
 			else{
 				console.log('you are not an admin')
-				res.redirect("/otp");
+				//res.redirect("/otp");
+				res.redirect("/user/home");
 			}
 				
 			}

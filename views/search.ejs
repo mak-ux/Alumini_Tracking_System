@@ -1,50 +1,75 @@
-<%- include('./partials/header.ejs')%>
+<%- include('./partials/create_event.ejs')%>
    <!-- Navbar content -->
      <div class="container-fluid" style="padding: 10em; background-image:url(/images/mak.png);background-position:center;background-size:cover;background-repeat:no-repeat">
    
   
    </div>
-  <!-- crosel content -->
-  
-<!-- crosel content -->
-  <!-- crosel content -->
-  <div class="container">
-    <div class="row">
-        <h1 style="text-align: center;">Search For Alumini</h1>
-        <div style="width: 30%; margin: 30px auto;">
-            <form action="/search/search1" method="POST">
-                <div class="form-group">
-                    <input class="form-control" type="text" name="fullname" placeholder="name">
-                </div>
-
-
-                <div class="form-group">
-                    <input class="form-control" type="text" name="college" placeholder="college">
-                </div>
-
-                <div class="form-group">
-                    <input class="form-control" type="text" name="branch" placeholder="branch">
-                </div>
-
-
-                <div class="form-group">
-                    <input class="form-control" type="text" name="batch" placeholder="batch">
-                </div>
-
-
-                <div class="form-group">
-                    <button class="btn btn-lg btn-primary btn-block">Search!</button>
-                </div>
-
-
-            </form>
-           
+   <section>
+    <div class="gap redish high-opacity">
+      <div class="content-bg-wrap" style="background: url(/images/resources/animate-bg.png)"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="head-meta">
+              <h5>search</h5>
+              
+            </div>
+          </div>
         </div>
-
+      </div>
     </div>
-</div>
-    <!-- add content -->
-   
+  </section>
+  <div class="container">
+    <form method="post" action="/search/search1" >
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="fullname">fullname</label>
+        </div>
+        <div class="col-75">
+          <input type="text" placeholder="fullname" name="fullname">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="college">college</label>
+        </div>
+        <div class="col-75">
+          <input type="text" placeholder="college" name="college">
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-25">
+          <label for="branch">branch</label>
+        </div>
+        <div class="col-75">
+          <input type="text" placeholder="branch" name="branch">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="batch">batch</label>
+        </div>
+        <div class="col-75">
+          <input  type="text" placeholder="batch" name="batch">
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-25">
+          <label for="search"></label>
+        </div>
+        <div class="col-75">
+          <input id="subject" type="submit" value="Search">
+          
+        </div>
+      </div>
+    </form>
+  </div>
    
   
     <%- include('./partials/footer.ejs')%>
+
+    

@@ -9,8 +9,8 @@ var bodyParser = require('body-parser');
 
 
 // Load and initialize MesageBird SDK
-//var messagebird = require('messagebird')('FB3bcFcJkII2I1kYIEdP1AiBC');
-var messagebird = require('messagebird')('a6ThMKcuPyw00AXQP2qva3ZKk');
+var messagebird = require('messagebird')('FB3bcFcJkII2I1kYIEdP1AiBC');
+//var messagebird = require('messagebird')('a6ThMKcuPyw00AXQP2qva3ZKk');
 router.use(bodyParser.urlencoded({ extended : true }));
 
 // Display page to ask the user for their phone number

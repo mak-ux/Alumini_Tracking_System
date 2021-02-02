@@ -1,4 +1,4 @@
-<%- include('./partials/header.ejs')%>
+<%- include('./partials/create_job.ejs')%>
    <!-- Navbar content -->
      <div class="container-fluid" style="padding: 10em; background-image:url(/images/mak.png);background-position:center;background-size:cover;background-repeat:no-repeat">
    
@@ -21,53 +21,77 @@
   </div>
 </section>
 
-<section>
-  <div class="gap">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="new-create">
-            <span class="main-title">Post New Job </span>
-            <form method="post" class="white-form" action="/job/create-job" >
-              <span>Post:</span><br><br>
-              <select  name="type">
-                <option>Select Type</option>
-                <option>Fulltime</option>
-                <option>Intern</option>
-              </select>
-              
-              <div>
-                <select name="position" id="">
-                  <option>Select Position</option>
-                  <option value="Workshop">Software Developer</option>
-                  <option value="Hackathon">IT Positions</option>
-                  <option value="cultural">Brand Ambessoder</option>
-                  <option value="cultural">Machine Learning Engineer</option>
-                  <option value="cultural">Full Stack Developer</option>
-                </select>
-              </div>
-              
-              <div>
-                <input type="text" placeholder="Website URL" name="jobURL">
-              </div>
-              <div>
-                <textarea placeholder="Description" rows="4" name="description"></textarea>
-              </div>
-              
-              <div class="event-calendar">
-                <label for="datepicker">
-                  <input type="date" name="date" id="datepicker" autocomplete="off">
-                </label>	
-              </div>
-              <button type="submit" class="main-btn">Post Now</button>
-            </form>
-          </div>	
-        </div>
+
+<div class="container">
+  <form method="post" action="/job/create-job">
+    <div class="row">
+      
+      <div class="col-25">
+        <label for="type">Job Type</label>
+      </div>
+      <div class="col-75">
+        <select  name="type">
+          <option>Select Type</option>
+          <option>Fulltime</option>
+          <option>Intern</option>
+        </select>
       </div>
     </div>
-  </div>
-</section>
+    <div class="row">
+      <div class="col-25">
+        <label for="position">Position</label>
+      </div>
+      <div class="col-75">
+        <select name="position" id="">
+          <option>Select Position</option>
+          <option value="Workshop">Software Developer</option>
+          <option value="Hackathon">IT Positions</option>
+          <option value="cultural">Brand Ambessoder</option>
+          <option value="cultural">Machine Learning Engineer</option>
+          <option value="cultural">Full Stack Developer</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="jobURL">Link To Apply</label>
+      </div>
+      <div class="col-75">
+        <input type="text" placeholder="Website URL" name="jobURL">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="description">Job Description</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="description" placeholder="Write description.." style="height:200px"></textarea>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="col-25">
+        <label for="Date">Date</label>
+      </div>
+      <div class="col-75">
+        <input style="width: 40%;padding: 5px 7px;; " type="date" name="date" id="subject" autocomplete="off">
+        
+      </div>
+    </div>
+    
+    
+
+    <div class="row">
+      <div class="col-25">
+        <label for="Date"></label>
+      </div>
+      <div class="col-75">
+        <input id="subject" type="submit" value="Post">
+        
+      </div>
+    </div>
+  </form>
+</div>
   <!-- crosel content -->
- 
+  
   <%- include('./partials/footer.ejs')%>

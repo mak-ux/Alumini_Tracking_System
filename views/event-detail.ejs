@@ -1,57 +1,59 @@
 <%- include('./partials/header.ejs')%>
    <!-- Navbar content -->
-     
+   <section>
+	<div class="gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-25">
+					<label for="title"></label>
+				</div>
+			<div class="col-75">
+		<ul>
+			
+				<li>
+					
+					
+					<% if( event){ %>
+
+						<div class="container">
+							<h5>welcome to <%= event.name %></h5><br><br>
+							<b>Published Date:</b><span><%= event.date %></span>/<span><%= event.month %></span>/<span><%= event.year %></span><br>
+							<b>schedule:</b>From: <span><%= event.time %>: <%= event.clock %></span><br>
+							<b>Description:</b> <span>  <%= event.description %> </span><br><br>
+							<div class="row">
+							  <div class="col-md-4">
+								<div class="thumbnail">
+								  <a href="<%= event.websiteURL %>" target="_blank">
+									<img src= "/uploads/<%= event.img[0] %>" alt="Lights" style="width:100%;border-radius: 50%;">
+									<div class="caption">
+									  <p><%= event.name %>.</p>
+									</div>
+								  </a>
+								</div>
+							  </div>
+							  
+							  
+							</div>
+							<a class="prv" href="<%= event.websiteURL %>" title="">Click To Visit <i class="lni lni-arrow-right"></i></a>
+						  </div>
+						<% } %>
+					
+				</li>
+				<br>
+				
+			</ul>
+		</div>
+	</div>
+	
+	
+</section>
+<%- include('./partials/footer.ejs')%>
+
    
   
   
-  <!-- crosel content -->
-
-	<section>
-		<div class="gap no-gap" style="margin-left: 250px;">
-			<div class="event-detail">
-				<div class="blog-image">
-					
-				<div class="event-meta">
-					<div class="event-timing">
-                        <h5>welcome to <%= event.name %></h5><br><br>
-						<a href="#" title="" class="postdate"><%=event.date %> <span><%= event.month %></span> <%= event.year %></a>
-						<h5><i class="lni lni-timer"></i> From: <span><%= event.time %>: <%= event.clock %></span></h5>
-						
-					</div>
-					
-  
-					
-					<h2><%= event.name %></h2>
-					
-					<p>
-				        <%= event.description %>
-					</p>
-					<h5 class="main-title"></h5>
-					<div class="row merged10">
-						
-                        <% if( event){ %>
-
-							<div class="col-6">
-                               
-								<img style=" border: 1px solid #ddd;
-								border-radius: 4px;
-								padding: 5px;
-								width: 800px;border-radius: 50%;" src= "/uploads/<%= event.img[0] %>" alt="">
-							</div>
-						
-                            <% } %>
-
-					</div>
-					<div><p>
-						<%= event.description %>
-					</p></div>
-					
-					
-					<a class="prv" href="<%= event.websiteURL %>" title=""> Join Now <i class="lni lni-arrow-right"></i></a>
-				</div>
-			</div>
-		</div>
-	</section>
-  
-  <!-- crosel content -->
  
+   
+  
+  
+  

@@ -1,4 +1,5 @@
 const express = require("express")
+const axios = require("axios")
 const app = express()
 const bodyParser= require("body-parser")
 const cookieParser=require('cookie-parser')
@@ -62,7 +63,29 @@ app.use((req,res,next)=>{
 app.get("/",(req,res)=>{
 	res.redirect('/user/create')
 });
-
+//new section
+app.route("/posts")
+  .get(function (req, res) {
+    axios
+      .get("https://jsonplaceholder.typicode.com/photos")
+      .then(function (result) {
+        res.render("list", {
+         items: result.data
+		});
+		//res.send( result.data)
+      })
+      .catch(function (error) {
+        // handle errors appropriately
+		//res.render("error", { error });
+		res.send('error');
+      });
+  });
+  app.post("/data",async(req,res) =>{
+    
+	res.send('done');
+  
+})
+//new field
 
 
 
