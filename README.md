@@ -2,7 +2,7 @@
 https://aluminitrackingsystem.herokuapp.com/user/create
 ## Alumini_Tracking_project
 
-### use the following credentials to see the project.
+### use the following credentials to see the project for admin end.
 
 ## username: kanhaiya12
 ## password:123456
