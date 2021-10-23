@@ -477,22 +477,3 @@ module.exports = router;
 
 
 
-
-
-
-/*<div class="container-fluid"></div>
-  <h5>Aluminies</h5>
-    <% if( user){ %>
-      <ul >
-        <li><p><%= user.fullname %></p></li>
-        <li><p><%= user.username %></p></li>
-        <li><p><%= user.age %></p></li>
-       
-        
-      </ul>
-      
-    
-    
-    
-      <% } %>
-  </div>*/
